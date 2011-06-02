@@ -228,6 +228,10 @@ h2 a {
 	text-align: justify;
 }
 
+#orientationInfo ul {
+
+}
+
 .post {
 	margin-bottom: 15px;
 }
@@ -276,6 +280,22 @@ h2 a {
 	background: url(images/img08.jpg) no-repeat left top;
 	padding: 25px 0px 0px 0px;
 	text-align: justify;
+}
+
+.post .entry ul{
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 40px;
+}
+
+.post .entry ul + ul{
+	padding-top: 20px;
+}
+
+.post .entry ul li{
+	font-size: 14px;
+	font-weight: normal;
+	padding-left: 20px;
 }
 
 .links {
