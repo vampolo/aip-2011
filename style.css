@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 h2 a {
@@ -191,7 +191,7 @@ h2 a {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	text-decoration: none;
 	text-align: center;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 	color: #FFFFFF;
 	border: none;
@@ -224,12 +224,27 @@ h2 a {
 	padding: 0px 0px 0px 0px;
 }
 
-#orientationInfo {
-	text-align: justify;
+#orientationInfo{
+    margin:0 0 15px;
+    padding:0;
+    height:1%;
+    font-size:11px;
+    line-height:13px;
+    list-style:none;
+    overflow:hidden;
+    text-transform:uppercase;
 }
 
-#orientationInfo ul {
-
+#orientationInfo li{
+    float:left;
+    font-weight:bold;
+    padding:0 5px 0 11px;
+    margin:0 10px 0 -10px;
+    background:url(images/bullet.gif) no-repeat left;
+}
+#orientationInfo a{
+    color:#484848;
+    font-weight:normal;
 }
 
 .post {
