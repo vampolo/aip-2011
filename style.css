@@ -224,6 +224,10 @@ h2 a {
 	padding: 0px 0px 0px 0px;
 }
 
+#orientationInfo {
+	text-align: justify;
+}
+
 .post {
 	margin-bottom: 15px;
 }
