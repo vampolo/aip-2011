@@ -318,6 +318,9 @@ h2 a {
 	font-weight: normal;
 }
 
+#groupLinks {
+	float: right;
+}
 
 /* Sidebar */
 
