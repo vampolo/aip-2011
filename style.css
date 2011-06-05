@@ -313,6 +313,13 @@ h2 a {
 	padding-left: 20px;
 }
 
+.post .entry img {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	width: 300px;
+}
+
 .links {
 	padding-top: 20px;
 }
