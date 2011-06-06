@@ -320,6 +320,13 @@ h2 a {
 	width: 300px;
 }
 
+.post .entry ul li img {
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 50px;
+}
+
 .links {
 	padding-top: 20px;
 }
