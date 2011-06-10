@@ -5,6 +5,7 @@ http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
 
+/* MAIN */
 body {
 	margin: 0;
 	padding: 0;
@@ -501,6 +502,7 @@ h2 a {
 	text-align: center;
 	color: #82A2B9;
 }
+
 
 #footer a {
 	text-decoration: underline;
