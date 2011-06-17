@@ -1,6 +1,6 @@
 package it.aip.models;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-16 18:38:28")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-17 11:23:39")
 /** */
 public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.aip.models.OrganicProduct> {
 
@@ -14,9 +14,6 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
     public final org.slim3.datastore.CoreAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Key> key = new org.slim3.datastore.CoreAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Key>(this, "__key__", "key", com.google.appengine.api.datastore.Key.class);
 
     /** */
-    public final org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key> offersList = new org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key>(this, "offersList", "offersList", java.util.List.class);
-
-    /** */
     public final org.slim3.datastore.CoreAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Key> producer = new org.slim3.datastore.CoreAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Key>(this, "producer", "producer", com.google.appengine.api.datastore.Key.class);
 
     /** */
@@ -27,6 +24,9 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
 
     /** */
     public final org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key> relatedDiets = new org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key>(this, "relatedDiets", "relatedDiets", java.util.List.class);
+
+    /** */
+    public final org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key> relatedOffers = new org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key>(this, "relatedOffers", "relatedOffers", java.util.List.class);
 
     /** */
     public final org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key> relatedRecipes = new org.slim3.datastore.CollectionAttributeMeta<it.aip.models.OrganicProduct, java.util.List<com.google.appengine.api.datastore.Key>, com.google.appengine.api.datastore.Key>(this, "relatedRecipes", "relatedRecipes", java.util.List.class);
@@ -51,11 +51,11 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         model.setGeneralInfo((java.lang.String) entity.getProperty("generalInfo"));
         model.setHealthBenefits((java.lang.String) entity.getProperty("healthBenefits"));
         model.setKey(entity.getKey());
-        model.setOffersList(toList(com.google.appengine.api.datastore.Key.class, entity.getProperty("offersList")));
         model.setProducer((com.google.appengine.api.datastore.Key) entity.getProperty("producer"));
         model.setProductImage((java.lang.String) entity.getProperty("productImage"));
         model.setProductName((java.lang.String) entity.getProperty("productName"));
         model.setRelatedDiets(toList(com.google.appengine.api.datastore.Key.class, entity.getProperty("relatedDiets")));
+        model.setRelatedOffers(toList(com.google.appengine.api.datastore.Key.class, entity.getProperty("relatedOffers")));
         model.setRelatedRecipes(toList(com.google.appengine.api.datastore.Key.class, entity.getProperty("relatedRecipes")));
         return model;
     }
@@ -71,11 +71,11 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         }
         entity.setProperty("generalInfo", m.getGeneralInfo());
         entity.setProperty("healthBenefits", m.getHealthBenefits());
-        entity.setProperty("offersList", m.getOffersList());
         entity.setProperty("producer", m.getProducer());
         entity.setProperty("productImage", m.getProductImage());
         entity.setProperty("productName", m.getProductName());
         entity.setProperty("relatedDiets", m.getRelatedDiets());
+        entity.setProperty("relatedOffers", m.getRelatedOffers());
         entity.setProperty("relatedRecipes", m.getRelatedRecipes());
         return entity;
     }
@@ -142,14 +142,6 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
             writer.setNextPropertyName("key");
             encoder0.encode(writer, m.getKey());
         }
-        if(m.getOffersList() != null){
-            writer.setNextPropertyName("offersList");
-            writer.beginArray();
-            for(com.google.appengine.api.datastore.Key v : m.getOffersList()){
-                encoder0.encode(writer, v);
-            }
-            writer.endArray();
-        }
         if(m.getProducer() != null){
             writer.setNextPropertyName("producer");
             encoder0.encode(writer, m.getProducer());
@@ -166,6 +158,14 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
             writer.setNextPropertyName("relatedDiets");
             writer.beginArray();
             for(com.google.appengine.api.datastore.Key v : m.getRelatedDiets()){
+                encoder0.encode(writer, v);
+            }
+            writer.endArray();
+        }
+        if(m.getRelatedOffers() != null){
+            writer.setNextPropertyName("relatedOffers");
+            writer.beginArray();
+            for(com.google.appengine.api.datastore.Key v : m.getRelatedOffers()){
                 encoder0.encode(writer, v);
             }
             writer.endArray();
@@ -192,23 +192,6 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         m.setHealthBenefits(decoder0.decode(reader, m.getHealthBenefits()));
         reader = rootReader.newObjectReader("key");
         m.setKey(decoder0.decode(reader, m.getKey()));
-        reader = rootReader.newObjectReader("offersList");
-        {
-            java.util.ArrayList<com.google.appengine.api.datastore.Key> elements = new java.util.ArrayList<com.google.appengine.api.datastore.Key>();
-            org.slim3.datastore.json.JsonArrayReader r = rootReader.newArrayReader("offersList");
-            if(r != null){
-                reader = r;
-                int n = r.length();
-                for(int i = 0; i < n; i++){
-                    r.setIndex(i);
-                    com.google.appengine.api.datastore.Key v = decoder0.decode(reader, (com.google.appengine.api.datastore.Key)null)                    ;
-                    if(v != null){
-                        elements.add(v);
-                    }
-                }
-                m.setOffersList(elements);
-            }
-        }
         reader = rootReader.newObjectReader("producer");
         m.setProducer(decoder0.decode(reader, m.getProducer()));
         reader = rootReader.newObjectReader("productImage");
@@ -230,6 +213,23 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
                     }
                 }
                 m.setRelatedDiets(elements);
+            }
+        }
+        reader = rootReader.newObjectReader("relatedOffers");
+        {
+            java.util.ArrayList<com.google.appengine.api.datastore.Key> elements = new java.util.ArrayList<com.google.appengine.api.datastore.Key>();
+            org.slim3.datastore.json.JsonArrayReader r = rootReader.newArrayReader("relatedOffers");
+            if(r != null){
+                reader = r;
+                int n = r.length();
+                for(int i = 0; i < n; i++){
+                    r.setIndex(i);
+                    com.google.appengine.api.datastore.Key v = decoder0.decode(reader, (com.google.appengine.api.datastore.Key)null)                    ;
+                    if(v != null){
+                        elements.add(v);
+                    }
+                }
+                m.setRelatedOffers(elements);
             }
         }
         reader = rootReader.newObjectReader("relatedRecipes");

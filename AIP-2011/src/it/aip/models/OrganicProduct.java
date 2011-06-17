@@ -20,7 +20,7 @@ public class OrganicProduct implements Serializable {
     private String healthBenefits;      // informazioni sui benefici
     private List<Key> relatedRecipes;   // lista di ricette correlate
     private List<Key> relatedDiets;     // lista di diete correlate
-    private List<Key> offersList;       // lista di offerte correlate
+    private List<Key> relatedOffers;       // lista di offerte correlate
     
     public void setKey(Key key) {
         this.key = key;
@@ -78,11 +78,11 @@ public class OrganicProduct implements Serializable {
         return relatedDiets;
     }
     
-    public void setOffersList(List<Key> offersList) {
-        this.offersList = offersList;
+    public void setRelatedOffers(List<Key> offersList) {
+        this.relatedOffers = offersList;
     }
-    public List<Key> getOffersList() {
-        return offersList;
+    public List<Key> getRelatedOffers() {
+        return relatedOffers;
     }
     
 }
