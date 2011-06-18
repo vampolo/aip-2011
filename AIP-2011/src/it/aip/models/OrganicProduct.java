@@ -1,12 +1,14 @@
 package it.aip.models;
 
 import java.io.Serializable;
-import java.util.List;
 
 import com.google.appengine.api.datastore.Key;
 import org.slim3.datastore.Attribute;
+import org.slim3.datastore.InverseModelListRef;
 import org.slim3.datastore.Model;
+import org.slim3.datastore.ModelRef;
 
+@SuppressWarnings("serial")
 @Model
 public class OrganicProduct implements Serializable {
     
@@ -14,14 +16,49 @@ public class OrganicProduct implements Serializable {
     private Key key;
     
     private String productName;         // nome del prodotto    
-    private Key producer;               // chiave del produttore
+    private String productCategory;     // categoria di prodotto
     private String productImage;        // url dell'immagine associata al prodotto
-    private String generalInfo;         // informazioni generiche sul prodotto
-    private String healthBenefits;      // informazioni sui benefici
-    private List<Key> relatedRecipes;   // lista di ricette correlate
-    private List<Key> relatedDiets;     // lista di diete correlate
-    private List<Key> relatedOffers;       // lista di offerte correlate
     
+    // Riferimento al produttore (one-to-one)
+    private ModelRef<BioProducer> producerRef 
+        = new ModelRef<BioProducer>(BioProducer.class);
+    
+    // Riferimento alle ricette (one-to-many)
+    @Attribute(persistent = false)
+    private InverseModelListRef<RecipeProduct, OrganicProduct> recipeProductListRef
+        = new  InverseModelListRef<RecipeProduct, OrganicProduct>(RecipeProduct.class,  "productRef", this);
+    
+    // relatedDiets;     // lista di diete correlate (MULTIPLE TOPIC NON IMPLEMENTATO)
+    // relatedOffers;    // lista di offerte correlate (MULTIPLE TOPIC NON IMPLEMENTATO)
+    
+    @Attribute(lob = true)
+    private String generalInfo;         // informazioni generiche sul prodotto
+    @Attribute(lob = true)
+    private String healthBenefits;      // informazioni sui benefici   
+    
+        
+    public OrganicProduct() {
+        super();
+    }
+    public OrganicProduct(
+            Key key,
+            String productName,
+            String productCategory,
+            String productImage,
+            ModelRef<BioProducer> producerRef,
+            InverseModelListRef<RecipeProduct, OrganicProduct> recipeProductListRef,
+            String generalInfo, String healthBenefits) {
+        super();
+        this.key = key;
+        this.productName = productName;
+        this.productCategory = productCategory;
+        this.productImage = productImage;
+        this.producerRef = producerRef;
+        this.recipeProductListRef = recipeProductListRef;
+        this.generalInfo = generalInfo;
+        this.healthBenefits = healthBenefits;
+    }
+
     public void setKey(Key key) {
         this.key = key;
     }
@@ -34,13 +71,6 @@ public class OrganicProduct implements Serializable {
     }
     public String getProductName() {
         return productName;
-    }
-    
-    public void setProducer(Key producer) {
-        this.producer = producer;
-    }
-    public Key getProducer() {
-        return producer;
     }
     
     public void setProductImage(String productImage) {
@@ -63,26 +93,21 @@ public class OrganicProduct implements Serializable {
     public String getHealthBenefits() {
         return healthBenefits;
     }
-    
-    public void setRelatedRecipes(List<Key> relatedRecipes) {
-        this.relatedRecipes = relatedRecipes;
-    }
-    public List<Key> getRelatedRecipes() {
-        return relatedRecipes;
+       
+    public ModelRef<BioProducer> getProducerRef() {
+        return producerRef;
     }
     
-    public void setRelatedDiets(List<Key> relatedDiets) {
-        this.relatedDiets = relatedDiets;
-    }
-    public List<Key> getRelatedDiets() {
-        return relatedDiets;
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
     }
     
-    public void setRelatedOffers(List<Key> offersList) {
-        this.relatedOffers = offersList;
+    public String getProductCategory() {
+        return productCategory;
     }
-    public List<Key> getRelatedOffers() {
-        return relatedOffers;
+
+    public InverseModelListRef<RecipeProduct, OrganicProduct> getRecipeProductListRef() {
+        return recipeProductListRef;
     }
     
 }

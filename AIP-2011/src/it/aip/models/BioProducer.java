@@ -5,22 +5,49 @@ import java.util.List;
 
 import com.google.appengine.api.datastore.Key;
 import org.slim3.datastore.Attribute;
+import org.slim3.datastore.InverseModelListRef;
 import org.slim3.datastore.Model;
 
+@SuppressWarnings("serial")
 @Model
 public class BioProducer implements Serializable {
     
     @Attribute(primaryKey = true)
     private Key key;
-    
+  
     private String producerName;        // nome del produttore
-    private String infoAzienda;         // informazioni generali
-    private String productionMethod;    // metodi di produzione 
-    private String practicalInfo;       // informazioni pratiche
     private List<String> relatedPhotos; // lista delle url delle foto
-    private List<Key> relatedProducts;  // lista di prodotti offerti
+    
+    // Riferimento ai prodotti (one-to-many)
+    @Attribute(persistent = false)
+    private InverseModelListRef<OrganicProduct, BioProducer> productsListRef 
+        = new InverseModelListRef<OrganicProduct, BioProducer>(OrganicProduct.class, "producerRef", this);
+    
+    @Attribute(lob = true)
+    private String infoAzienda;         // informazioni generali
+    @Attribute(lob = true)
+    private String productionMethod;    // metodi di produzione 
+    @Attribute(lob = true)
+    private String practicalInfo;       // informazioni pratiche    
     
     
+    public BioProducer() {
+        super();
+    }
+    public BioProducer(Key key, String producerName,
+            List<String> relatedPhotos,
+            InverseModelListRef<OrganicProduct, BioProducer> productsListRef,
+            String infoAzienda, String productionMethod, String practicalInfo) {
+        super();
+        this.key = key;
+        this.producerName = producerName;
+        this.relatedPhotos = relatedPhotos;
+        this.productsListRef = productsListRef;
+        this.infoAzienda = infoAzienda;
+        this.productionMethod = productionMethod;
+        this.practicalInfo = practicalInfo;
+    }
+
     public void setKey(Key key) {
         this.key = key;
     }
@@ -62,12 +89,9 @@ public class BioProducer implements Serializable {
     public List<String> getRelatedPhotos() {
         return relatedPhotos;
     }
-
-    public void setRelatedProducts(List<Key> products) {
-        this.relatedProducts = products;
-    }
-    public List<Key> getRelatedProducts() {
-        return relatedProducts;
+    
+    public InverseModelListRef<OrganicProduct, BioProducer> getProductsListRef() {
+        return productsListRef;
     }
 
 }
