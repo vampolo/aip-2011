@@ -10,5 +10,9 @@
 </head>
 <body>
 <p>Hello test Index !!!</p>
+<p>Objects...</p>
+<c:forEach var="product" items="${productsList}">
+	${f:h(product.productName} --> ${f:h(product.productCategory}
+</c:forEach>
 </body>
 </html>
