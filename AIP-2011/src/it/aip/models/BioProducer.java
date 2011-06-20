@@ -1,8 +1,8 @@
 package it.aip.models;
 
 import java.io.Serializable;
-import java.util.List;
 
+import com.google.appengine.api.datastore.Blob;
 import com.google.appengine.api.datastore.Key;
 import org.slim3.datastore.Attribute;
 import org.slim3.datastore.InverseModelListRef;
@@ -16,7 +16,7 @@ public class BioProducer implements Serializable {
     private Key key;
   
     private String producerName;        // nome del produttore
-    private List<String> relatedPhotos; // lista delle url delle foto
+    private Blob producerImage;         // foto del produttore
     
     // Riferimento ai prodotti (one-to-many)
     @Attribute(persistent = false)
@@ -30,24 +30,7 @@ public class BioProducer implements Serializable {
     @Attribute(lob = true)
     private String practicalInfo;       // informazioni pratiche    
     
-    
-    public BioProducer() {
-        super();
-    }
-    public BioProducer(Key key, String producerName,
-            List<String> relatedPhotos,
-            InverseModelListRef<OrganicProduct, BioProducer> productsListRef,
-            String infoAzienda, String productionMethod, String practicalInfo) {
-        super();
-        this.key = key;
-        this.producerName = producerName;
-        this.relatedPhotos = relatedPhotos;
-        this.productsListRef = productsListRef;
-        this.infoAzienda = infoAzienda;
-        this.productionMethod = productionMethod;
-        this.practicalInfo = practicalInfo;
-    }
-
+       
     public void setKey(Key key) {
         this.key = key;
     }
@@ -82,16 +65,16 @@ public class BioProducer implements Serializable {
     public String getPracticalInfo() {
         return practicalInfo;
     }
-
-    public void setRelatedPhotos(List<String> photo) {
-        this.relatedPhotos = photo;
-    }
-    public List<String> getRelatedPhotos() {
-        return relatedPhotos;
-    }
-    
+   
     public InverseModelListRef<OrganicProduct, BioProducer> getProductsListRef() {
         return productsListRef;
+    }
+
+    public void setProducerImage(Blob producerImage) {
+        this.producerImage = producerImage;
+    }
+    public Blob getProducerImage() {
+        return producerImage;
     }
 
 }

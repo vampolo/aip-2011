@@ -7,6 +7,7 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class IndexControllerTest extends ControllerTestCase {
 
+    
     @Test
     public void run() throws Exception {
         tester.start("/test/");
@@ -14,5 +15,6 @@ public class IndexControllerTest extends ControllerTestCase {
         assertThat(controller, is(notNullValue()));
         assertThat(tester.isRedirect(), is(false));
         assertThat(tester.getDestinationPath(), is("/test/index.jsp"));
+        assertThat(tester.requestScope("bioProducersList"), is(notNullValue()));
     }
 }

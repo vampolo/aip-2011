@@ -4,15 +4,131 @@
 <%@taglib prefix="f" uri="http://www.slim3.org/functions"%>
 
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>test Index</title>
-</head>
-<body>
-<p>Hello test Index !!!</p>
-<p>Objects...</p>
-<c:forEach var="product" items="${productsList}">
-	${f:h(product.productName} --> ${f:h(product.productCategory}
-</c:forEach>
-</body>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Administration page</title>
+	</head>
+	<body>
+		<h1>Administration page</h1>
+		<link rel="stylesheet" type="text/css" href="/css/adminStyle.css" />
+		
+		<div id="forms">
+			<span class="BioProducer">
+				<h2>Crea un nuovo BioProducer</h2>
+				
+				<form method="post" action="createBioProducer">
+					<p>Inserire i dati per la creazione di una nuova entità di tipo BioProducer.</p>
+					
+					Nome dell'azienda: <input type="text" name="producerName"><br /><br />
+					
+					Informazioni generali sull'azienda:<br />
+					<textarea name="infoAzienda"></textarea><br /><br />
+					
+					Informazioni sul metodo di produzione:<br />
+					<textarea name="productionMethod"></textarea><br /><br />
+									
+					Informazioni pratiche:<br />
+					<textarea name="practicalInfo"></textarea><br /><br />
+					<input type="submit" value="submit"/>
+				</form>
+			</span>
+			
+			<span class="OrganicProduct">
+				<h2>Crea un nuovo OrganicProduct</h2>
+				
+				<form method="post" action="createOrganicProduct">
+					<p>Inserire i dati per la creazione di una nuova entità di tipo OrganicProduct.</p>
+					
+					Nome del prodotto: <input type="text" name="productName"><br /><br />
+					
+					Categoria del prodotto: <input type="text" name="productCategory"><br /><br />
+					
+					Informazioni generali sul prodotto:<br />
+					<textarea name="generalInfo"></textarea><br /><br />
+					
+					Informazioni sui benefici:<br />
+					<textarea name="healthBenefits"></textarea><br /><br />
+					<input type="submit" value="submit"/>
+				</form>
+			</span>
+			
+			<span class="Recipe">
+				<h2>Crea una nuova Recipe</h2>
+				
+				<form method="post" action="createRecipe">
+					<p>Inserire i dati per la creazione di una nuova entità di tipo Recipe.</p>
+					
+					Nome della ricetta: <input type="text" name="recipeName"><br /><br />
+					
+					Tipo di ricetta: <input type="text" name="recipeType"><br /><br />
+					
+					Descrizione della ricetta:<br />
+					<textarea name="recipeDescription"></textarea><br /><br />
+
+					<input type="submit" value="submit"/>
+				</form>
+			</span>			
+		</div>
+		
+		<div id="itemsLists">
+			<span class="BioProducer">
+				<h2>Elenco dei BioProducers</h2>
+				<table>
+					<tr>
+						<td>producerName</td>
+						<td>infoAzienda</td>
+						<td>productionMethod</td>
+						<td>practicalInfo</td>
+					</tr>
+					<c:forEach var="producer" items="${bioProducersList}">
+						<tr>
+							<td>${f:h(producer.producerName)}</td>
+							<td>${f:h(producer.infoAzienda)}</td>
+							<td>${f:h(producer.productionMethod)}</td>
+							<td>${f:h(producer.practicalInfo)}</td>
+						</tr>
+					</c:forEach>				
+				</table>
+			</span>
+
+			<span class="OrganicProduct">
+				<h2>Elenco degli OrganicProducts</h2>
+				<table>
+					<tr>
+						<td>productName</td>
+						<td>productCategory</td>
+						<td>generalInfo</td>
+						<td>healthBenefits</td>
+					</tr>
+					<c:forEach var="product" items="${organicProductsList}">
+						<tr>
+							<td>${f:h(product.productName)}</td>
+							<td>${f:h(product.productCategory)}</td>
+							<td>${f:h(product.generalInfo)}</td>
+							<td>${f:h(product.healthBenefits)}</td>
+						</tr>
+					</c:forEach>				
+				</table>
+			</span>
+			
+			<span class="Recipe">
+				<h2>Elenco delle Recipes</h2>
+				<table>
+					<tr>
+						<td>recipeName</td>
+						<td>recipeType</td>
+						<td>recipeDescription</td>
+					</tr>
+					<c:forEach var="recipe" items="${recipesList}">
+						<tr>
+							<td>${f:h(recipe.recipeName)}</td>
+							<td>${f:h(recipe.recipeType)}</td>
+							<td>${f:h(recipe.recipeDescription)}</td>
+						</tr>
+					</c:forEach>				
+				</table>
+			</span>
+		</div>
+		
+	</body>
 </html>

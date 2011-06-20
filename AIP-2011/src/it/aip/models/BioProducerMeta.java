@@ -1,6 +1,6 @@
 package it.aip.models;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-20 01:42:05")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-20 15:11:29")
 /** */
 public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.models.BioProducer> {
 
@@ -14,13 +14,13 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
     public final org.slim3.datastore.StringUnindexedAttributeMeta<it.aip.models.BioProducer> practicalInfo = new org.slim3.datastore.StringUnindexedAttributeMeta<it.aip.models.BioProducer>(this, "practicalInfo", "practicalInfo");
 
     /** */
+    public final org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.BioProducer, com.google.appengine.api.datastore.Blob> producerImage = new org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.BioProducer, com.google.appengine.api.datastore.Blob>(this, "producerImage", "producerImage", com.google.appengine.api.datastore.Blob.class);
+
+    /** */
     public final org.slim3.datastore.StringAttributeMeta<it.aip.models.BioProducer> producerName = new org.slim3.datastore.StringAttributeMeta<it.aip.models.BioProducer>(this, "producerName", "producerName");
 
     /** */
     public final org.slim3.datastore.StringUnindexedAttributeMeta<it.aip.models.BioProducer> productionMethod = new org.slim3.datastore.StringUnindexedAttributeMeta<it.aip.models.BioProducer>(this, "productionMethod", "productionMethod");
-
-    /** */
-    public final org.slim3.datastore.StringCollectionAttributeMeta<it.aip.models.BioProducer, java.util.List<java.lang.String>> relatedPhotos = new org.slim3.datastore.StringCollectionAttributeMeta<it.aip.models.BioProducer, java.util.List<java.lang.String>>(this, "relatedPhotos", "relatedPhotos", java.util.List.class);
 
     private static final BioProducerMeta slim3_singleton = new BioProducerMeta();
 
@@ -42,9 +42,9 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         model.setInfoAzienda(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("infoAzienda")));
         model.setKey(entity.getKey());
         model.setPracticalInfo(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("practicalInfo")));
+        model.setProducerImage((com.google.appengine.api.datastore.Blob) entity.getProperty("producerImage"));
         model.setProducerName((java.lang.String) entity.getProperty("producerName"));
         model.setProductionMethod(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("productionMethod")));
-        model.setRelatedPhotos(toList(java.lang.String.class, entity.getProperty("relatedPhotos")));
         return model;
     }
 
@@ -59,9 +59,9 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         }
         entity.setUnindexedProperty("infoAzienda", stringToText(m.getInfoAzienda()));
         entity.setUnindexedProperty("practicalInfo", stringToText(m.getPracticalInfo()));
+        entity.setProperty("producerImage", m.getProducerImage());
         entity.setProperty("producerName", m.getProducerName());
         entity.setUnindexedProperty("productionMethod", stringToText(m.getProductionMethod()));
-        entity.setProperty("relatedPhotos", m.getRelatedPhotos());
         return entity;
     }
 
@@ -127,6 +127,10 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
             writer.setNextPropertyName("practicalInfo");
             encoder0.encode(writer, m.getPracticalInfo());
         }
+        if(m.getProducerImage() != null && m.getProducerImage().getBytes() != null){
+            writer.setNextPropertyName("producerImage");
+            encoder0.encode(writer, m.getProducerImage());
+        }
         if(m.getProducerName() != null){
             writer.setNextPropertyName("producerName");
             encoder0.encode(writer, m.getProducerName());
@@ -138,14 +142,6 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         if(m.getProductsListRef() != null){
             writer.setNextPropertyName("productsListRef");
             encoder0.encode(writer, m.getProductsListRef());
-        }
-        if(m.getRelatedPhotos() != null){
-            writer.setNextPropertyName("relatedPhotos");
-            writer.beginArray();
-            for(java.lang.String v : m.getRelatedPhotos()){
-                encoder0.encode(writer, v);
-            }
-            writer.endArray();
         }
         writer.endObject();
     }
@@ -161,28 +157,13 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         m.setKey(decoder0.decode(reader, m.getKey()));
         reader = rootReader.newObjectReader("practicalInfo");
         m.setPracticalInfo(decoder0.decode(reader, m.getPracticalInfo()));
+        reader = rootReader.newObjectReader("producerImage");
+        m.setProducerImage(decoder0.decode(reader, m.getProducerImage()));
         reader = rootReader.newObjectReader("producerName");
         m.setProducerName(decoder0.decode(reader, m.getProducerName()));
         reader = rootReader.newObjectReader("productionMethod");
         m.setProductionMethod(decoder0.decode(reader, m.getProductionMethod()));
         reader = rootReader.newObjectReader("productsListRef");
-        reader = rootReader.newObjectReader("relatedPhotos");
-        {
-            java.util.ArrayList<java.lang.String> elements = new java.util.ArrayList<java.lang.String>();
-            org.slim3.datastore.json.JsonArrayReader r = rootReader.newArrayReader("relatedPhotos");
-            if(r != null){
-                reader = r;
-                int n = r.length();
-                for(int i = 0; i < n; i++){
-                    r.setIndex(i);
-                    java.lang.String v = decoder0.decode(reader, (java.lang.String)null)                    ;
-                    if(v != null){
-                        elements.add(v);
-                    }
-                }
-                m.setRelatedPhotos(elements);
-            }
-        }
         return m;
     }
 }

@@ -1,6 +1,6 @@
 package it.aip.models;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-20 01:42:06")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-20 15:09:54")
 /** */
 public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.aip.models.OrganicProduct> {
 
@@ -20,7 +20,7 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
     public final org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct> productCategory = new org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct>(this, "productCategory", "productCategory");
 
     /** */
-    public final org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct> productImage = new org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct>(this, "productImage", "productImage");
+    public final org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Blob> productImage = new org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Blob>(this, "productImage", "productImage", com.google.appengine.api.datastore.Blob.class);
 
     /** */
     public final org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct> productName = new org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct>(this, "productName", "productName");
@@ -50,7 +50,7 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         }
         model.getProducerRef().setKey((com.google.appengine.api.datastore.Key) entity.getProperty("producerRef"));
         model.setProductCategory((java.lang.String) entity.getProperty("productCategory"));
-        model.setProductImage((java.lang.String) entity.getProperty("productImage"));
+        model.setProductImage((com.google.appengine.api.datastore.Blob) entity.getProperty("productImage"));
         model.setProductName((java.lang.String) entity.getProperty("productName"));
         return model;
     }
@@ -151,7 +151,7 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
             writer.setNextPropertyName("productCategory");
             encoder0.encode(writer, m.getProductCategory());
         }
-        if(m.getProductImage() != null){
+        if(m.getProductImage() != null && m.getProductImage().getBytes() != null){
             writer.setNextPropertyName("productImage");
             encoder0.encode(writer, m.getProductImage());
         }

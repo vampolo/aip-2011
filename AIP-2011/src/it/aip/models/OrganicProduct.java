@@ -2,6 +2,7 @@ package it.aip.models;
 
 import java.io.Serializable;
 
+import com.google.appengine.api.datastore.Blob;
 import com.google.appengine.api.datastore.Key;
 import org.slim3.datastore.Attribute;
 import org.slim3.datastore.InverseModelListRef;
@@ -17,7 +18,7 @@ public class OrganicProduct implements Serializable {
     
     private String productName;         // nome del prodotto    
     private String productCategory;     // categoria di prodotto
-    private String productImage;        // url dell'immagine associata al prodotto
+    private Blob productImage;          // immagine del prodotto
     
     // Riferimento al produttore (one-to-one)
     private ModelRef<BioProducer> producerRef 
@@ -37,28 +38,6 @@ public class OrganicProduct implements Serializable {
     private String healthBenefits;      // informazioni sui benefici   
     
         
-    public OrganicProduct() {
-        super();
-    }
-    public OrganicProduct(
-            Key key,
-            String productName,
-            String productCategory,
-            String productImage,
-            ModelRef<BioProducer> producerRef,
-            InverseModelListRef<RecipeProduct, OrganicProduct> recipeProductListRef,
-            String generalInfo, String healthBenefits) {
-        super();
-        this.key = key;
-        this.productName = productName;
-        this.productCategory = productCategory;
-        this.productImage = productImage;
-        this.producerRef = producerRef;
-        this.recipeProductListRef = recipeProductListRef;
-        this.generalInfo = generalInfo;
-        this.healthBenefits = healthBenefits;
-    }
-
     public void setKey(Key key) {
         this.key = key;
     }
@@ -72,14 +51,7 @@ public class OrganicProduct implements Serializable {
     public String getProductName() {
         return productName;
     }
-    
-    public void setProductImage(String productImage) {
-        this.productImage = productImage;
-    }
-    public String getProductImage() {
-        return productImage;
-    }
-    
+       
     public void setGeneralInfo(String generalInfo) {
         this.generalInfo = generalInfo;
     }
@@ -108,6 +80,13 @@ public class OrganicProduct implements Serializable {
 
     public InverseModelListRef<RecipeProduct, OrganicProduct> getRecipeProductListRef() {
         return recipeProductListRef;
+    }
+    
+    public void setProductImage(Blob productImage) {
+        this.productImage = productImage;
+    }
+    public Blob getProductImage() {
+        return productImage;
     }
     
 }
