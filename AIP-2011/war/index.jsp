@@ -4,7 +4,14 @@
 <%@taglib prefix="f" uri="http://www.slim3.org/functions"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<t:wrapper>
-    <h1>Welcome</h1>
-</t:wrapper>
-
+<t:basepage>
+    <jsp:attribute name="content">
+      <h1>Content here</h1>
+    </jsp:attribute>
+    <jsp:attribute name="sidebar">
+      <p id="copyright">Sidebar here</p>
+    </jsp:attribute>
+    <jsp:body>
+        <p>Hi I'm the heart of the message</p>
+    </jsp:body>
+</t:basepage>
