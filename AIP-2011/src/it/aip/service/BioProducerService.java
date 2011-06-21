@@ -41,11 +41,9 @@ public class BioProducerService {
                     OrganicProduct product = Datastore.get(OrganicProduct.class, Datastore.stringToKey(key));
                     product.getProducerRef().setModel(producer);
                     
-                    // TEST CODE 
-                    /*
-                    System.out.println(product.getProductName() + " linkato a " + product.getProducerRef().getModel().getProducerName());
-                    System.out.println(product.getProducerRef().getModel().getProducerName() + " linkato a " + producer.getProductsListRef().getModelList().size() + " oggetti");
-                    */
+                    // TEST CODE               
+                    // System.out.println(product.getProductName() + " linkato a " + product.getProducerRef().getModel().getProducerName());
+                    
                 }
             }
         }
