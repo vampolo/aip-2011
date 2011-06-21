@@ -29,6 +29,12 @@
 									
 					Informazioni pratiche:<br />
 					<textarea name="practicalInfo"></textarea><br /><br />
+					
+					Prodotti offerti:<br />
+					<c:forEach var="product" items="${organicProductsList}">
+						<input type="checkbox" name="${f:h(product.key)}"/> ${f:h(product.productName)} <br />						
+					</c:forEach><br />	
+					
 					<input type="submit" value="submit"/>
 				</form>
 			</span>
@@ -48,6 +54,19 @@
 					
 					Informazioni sui benefici:<br />
 					<textarea name="healthBenefits"></textarea><br /><br />
+
+					Produttore:<br />
+					<select name="producerKey" >
+						<c:forEach var="producer" items="${bioProducersList}">
+							<option value="${f:h(producer.key)}" >${f:h(producer.producerName)}</option>
+						</c:forEach>	
+				 	</select><br /><br />
+
+					Ricette correlate:<br />
+					<c:forEach var="recipe" items="${recipesList}">
+						<input type="checkbox" name="${f:h(recipe.key)}"/> ${f:h(recipe.recipeName)} <br />						
+					</c:forEach><br />					
+					
 					<input type="submit" value="submit"/>
 				</form>
 			</span>
@@ -64,6 +83,11 @@
 					
 					Descrizione della ricetta:<br />
 					<textarea name="recipeDescription"></textarea><br /><br />
+					
+					Prodotti correlati:<br />
+					<c:forEach var="product" items="${organicProductsList}">
+						<input type="checkbox" name="${f:h(product.key)}"/> ${f:h(product.productName)} <br />						
+					</c:forEach><br />		
 
 					<input type="submit" value="submit"/>
 				</form>
@@ -85,7 +109,7 @@
 							<td>${f:h(producer.producerName)}</td>
 							<td>${f:h(producer.infoAzienda)}</td>
 							<td>${f:h(producer.productionMethod)}</td>
-							<td>${f:h(producer.practicalInfo)}</td>
+							<td>${f:h(producer.practicalInfo)}</td>							
 						</tr>
 					</c:forEach>				
 				</table>
@@ -105,7 +129,7 @@
 							<td>${f:h(product.productName)}</td>
 							<td>${f:h(product.productCategory)}</td>
 							<td>${f:h(product.generalInfo)}</td>
-							<td>${f:h(product.healthBenefits)}</td>
+							<td>${f:h(product.healthBenefits)}</td>					
 						</tr>
 					</c:forEach>				
 				</table>

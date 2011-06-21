@@ -1,5 +1,6 @@
 package it.aip.service;
 
+import it.aip.models.BioProducer;
 import it.aip.models.OrganicProduct;
 import it.aip.models.OrganicProductMeta;
 
@@ -21,6 +22,16 @@ public class OrganicProductService {
         
         // Copio tutti i parametri della request nei rispettivi campi del produttore
         BeanUtil.copy(requestParameters, product);
+        
+        // Se è stato specificato un produttore, lo linko al prodotto
+        if(requestParameters.containsKey("producerKey")){
+            String key = (String) requestParameters.get("producerKey");
+            BioProducer producer = Datastore.get(BioProducer.class, Datastore.stringToKey(key));
+            product.getProducerRef().setModel(producer);
+            
+            // TEST CODE 
+            // System.out.println(product.getProductName() + " linkato a " + product.getProducerRef().getModel().getProducerName());
+        }
         
         // Storing...
         Transaction tx = Datastore.beginTransaction();

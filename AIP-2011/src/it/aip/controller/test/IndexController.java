@@ -1,5 +1,6 @@
 package it.aip.controller.test;
 
+import java.util.Iterator;
 import java.util.List;
 
 import it.aip.models.BioProducer;
@@ -25,7 +26,7 @@ public class IndexController extends Controller {
         // Preparo la lista di produttori, da inserire nella pagina di amministrazione
         List<BioProducer> bioProducersList = bioProducerService.getAllBioProducers();
         requestScope("bioProducersList", bioProducersList);
-        
+               
         // Preparo la lista di prodotti, da inserire nella pagina di amministrazione
         List<OrganicProduct> organicProductsList = organicProductService.getAllOrganicProducts();
         requestScope("organicProductsList", organicProductsList);
