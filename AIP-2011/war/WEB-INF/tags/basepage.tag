@@ -15,22 +15,22 @@
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<h1><a href="index.html">Bio Consortium</a></h1>
+			<h1><a href="/">Bio Consortium</a></h1>
 			<p>Alimentazione e stile di vita sano</p>
 		</div>
 	</div>
 	<!-- end #header -->
 	<div id="menu">
 		<ul>
-			<li><a href="index.html">Home</a>			
-			<li><a href="produttori.html">Produttori</a></li>
-			<li><a href="prodotti.html">Prodotti</a></li>
-			<li><a href="prodotti.html">Offerte</a></li>
-			<li><a href="ricette.html">Ricette</a></li>
-			<li><a href="diete.html">Diete</a></li>
-			<li><a href="biologico.html">Cibo Biologico</a>
-			<li><a href="servizio.html">Il Servizo</a></li>
-			<li><a href="consorzio.html">Il Consorzio</a></li>
+			<li><a href="/">Home</a>			
+			<li><a href="/produttori">Produttori</a></li>
+			<li><a href="/prodotti">Prodotti</a></li>
+			<li><a href="/offerte">Offerte</a></li>
+			<li><a href="/ricette">Ricette</a></li>
+			<li><a href="/diete">Diete</a></li>
+			<li><a href="/biologico">Cibo Biologico</a>
+			<li><a href="/servizio">Il Servizo</a></li>
+			<li><a href="/consorzio">Il Consorzio</a></li>
 		</ul>
 	</div>
 	<!-- end #menu -->

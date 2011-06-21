@@ -14,7 +14,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="84" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="152" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -41,17 +41,19 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.jst.jsp.core.jspsource.source" name="basepage.tag" partName="basepage.tag" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/WEB-INF/tags/basepage.tag" title="basepage.tag" tooltip="AIP-2011/war/WEB-INF/tags/basepage.tag" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/WEB-INF/tags/basepage.tag"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="515" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="847" selectionTopPixel="408"/>
 </editor>
 <editor id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" partName="index.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/index.jsp" title="index.jsp" tooltip="AIP-2011/war/index.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/index.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="542" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="375" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.wst.html.core.htmlsource.source" name="index.html" partName="index.html" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/ktrwjr/index.html" title="index.html" tooltip="AIP-2011/war/ktrwjr/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/ktrwjr/index.html"/>
@@ -65,9 +67,17 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/controller/IndexController.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IndexController.java" partName="IndexController.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/controller/test/IndexController.java" title="IndexController.java" tooltip="AIP-2011/src/it/aip/controller/test/IndexController.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IndexController.java" partName="IndexController.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/controller/test/IndexController.java" title="IndexController.java" tooltip="AIP-2011/src/it/aip/controller/test/IndexController.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/controller/test/IndexController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2805" selectionTopPixel="996"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" partName="index.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/test/index.jsp" title="index.jsp" tooltip="AIP-2011/war/test/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/test/index.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="463" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProduct.java" partName="OrganicProduct.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/models/OrganicProduct.java" title="OrganicProduct.java" tooltip="AIP-2011/src/it/aip/models/OrganicProduct.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="2455" selectionTopPixel="4"/>
 </editor>
 </editors>
 <views>
@@ -191,7 +201,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6789087" ratioLeft="647" ratioRight="306" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottomRight" ratio="0.7051482" ratioLeft="452" ratioRight="189" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.AllMarkersView" label="Markers"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
@@ -231,10 +241,7 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/WEB-INF/tags/wrapper.tag"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/WEB-INF/tags/basepage.tag"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/index.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/AIP-2011/war/ktrwjr/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/AIP-2011/war/css/style.css"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/WEB-INF/tags/basepage.tag"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/index.jsp"/>
@@ -242,99 +249,162 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" path="/AIP-2011/war/ktrwjr/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/IndexController.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/test/IndexController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/test/it/aip/controller/test/IndexControllerTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/test/index.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/models/OrganicProductMeta.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/WEB-INF/tags/basepage.tag"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/index.jsp"/>
 </editors>
-<item historyLabel="wrapper.tag" index="0">
-<position info="not_deleted" x="0" y="63"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position/>
-</item>
-<item historyLabel="wrapper.tag" index="0">
-<position info="not_deleted" x="0" y="63"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position/>
-</item>
-<item historyLabel="wrapper.tag" index="0">
-<position info="not_deleted" x="0" y="63"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position/>
-</item>
-<item historyLabel="index.jsp" index="2">
-<position info="not_deleted" x="398" y="0"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position/>
-</item>
-<item historyLabel="index.jsp" index="2">
-<position info="not_deleted" x="398" y="0"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position/>
-</item>
-<item historyLabel="wrapper.tag" index="0">
-<position info="not_deleted" x="0" y="63"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position/>
-</item>
-<item historyLabel="index.jsp" index="2">
-<position info="not_deleted" x="377" y="0"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position info="not_deleted" x="1398" y="0"/>
-</item>
-<item historyLabel="index.jsp" index="2">
-<position info="not_deleted" x="431" y="0"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position info="not_deleted" x="293" y="0"/>
-</item>
-<item historyLabel="index.html" index="3">
-<position info="not_deleted" x="600" y="0"/>
-</item>
-<item historyLabel="index.jsp" index="2">
-<position info="not_deleted" x="431" y="0"/>
-</item>
-<item historyLabel="basepage.tag" index="1">
-<position info="not_deleted" x="663" y="0"/>
-</item>
-<item historyLabel="style.css" index="4">
+<item historyLabel="style.css" index="1">
 <position info="not_deleted" x="152" y="0"/>
 </item>
-<item historyLabel="basepage.tag" index="1">
+<item historyLabel="basepage.tag" index="0">
 <position info="not_deleted" x="451" y="0"/>
 </item>
-<item historyLabel="style.css" index="4">
+<item historyLabel="style.css" index="1">
 <position info="not_deleted" x="152" y="0"/>
 </item>
-<item historyLabel="basepage.tag" index="5">
+<item historyLabel="basepage.tag" index="2">
 <position info="not_deleted" x="451" y="0"/>
 </item>
-<item historyLabel="index.jsp" index="6">
+<item historyLabel="index.jsp" index="3">
 <position info="not_deleted" x="431" y="0"/>
 </item>
-<item historyLabel="basepage.tag" index="7">
+<item historyLabel="basepage.tag" index="4">
 <position info="not_deleted" x="515" y="0"/>
 </item>
-<item historyLabel="index.jsp" index="6">
+<item historyLabel="index.jsp" index="3">
 <position/>
 </item>
-<item historyLabel="index.html" index="8">
+<item historyLabel="index.html" index="5">
 <position info="not_deleted" x="600" y="0"/>
 </item>
-<item historyLabel="index.jsp" index="6">
+<item historyLabel="index.jsp" index="3">
 <position/>
 </item>
-<item historyLabel="IndexController.java" index="9">
+<item historyLabel="IndexController.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="IndexController.java" index="10">
+<item historyLabel="IndexController.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="IndexController.java" index="10">
+<item historyLabel="IndexController.java" index="7">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="IndexControllerTest.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="401" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3128" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3307" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="948" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="952" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="952" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3193" y="12"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3193" y="12"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3266" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="OrganicProduct.java" index="10">
+<position info="not_deleted" x="432" y="11"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="OrganicProductMeta.java" index="11">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="OrganicProduct.java" index="10">
+<position info="not_deleted" x="2455" y="14"/>
+</item>
+<item historyLabel="OrganicProductMeta.java" index="11">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="OrganicProduct.java" index="10">
+<position info="not_deleted" x="2455" y="14"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3266" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="OrganicProduct.java" index="10">
+<position info="not_deleted" x="2455" y="14"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="249" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="3318" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="249" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="2805" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="249" y="0"/>
+</item>
+<item historyLabel="basepage.tag" index="12">
+<position info="not_deleted" x="847" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position/>
+</item>
+<item historyLabel="index.jsp" index="13">
+<position info="not_deleted" x="375" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="2805" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="431" y="0"/>
+</item>
+<item historyLabel="IndexController.java" index="7">
+<position info="not_deleted" x="2805" y="0"/>
+</item>
+<item historyLabel="OrganicProduct.java" index="10">
+<position info="not_deleted" x="2455" y="14"/>
+</item>
+<item active="true" historyLabel="index.jsp" index="9">
+<position info="not_deleted" x="431" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -354,6 +424,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProductMeta.java" tooltip="AIP-2011/src/it/aip/models/OrganicProductMeta.java">
+<persistable path="/AIP-2011/src/it/aip/models/OrganicProductMeta.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProduct.java" tooltip="AIP-2011/src/it/aip/models/OrganicProduct.java">
+<persistable path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" tooltip="AIP-2011/war/test/index.jsp">
+<persistable path="/AIP-2011/war/test/index.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IndexControllerTest.java" tooltip="AIP-2011/test/it/aip/controller/test/IndexControllerTest.java">
+<persistable path="/AIP-2011/test/it/aip/controller/test/IndexControllerTest.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IndexController.java" tooltip="AIP-2011/src/it/aip/controller/test/IndexController.java">
 <persistable path="/AIP-2011/src/it/aip/controller/test/IndexController.java"/>
 </file>
