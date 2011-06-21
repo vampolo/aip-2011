@@ -55,7 +55,7 @@
 	</div>
 </div>
 <div id="footer">
-	<p> (c) 2011 BioConsortium.com. Design by <a href="http://www.nodethirtythree.com">nodethirtythree</a> and <a href="http://www.freecsstemplates.org">Free CSS Templates</a>.</p>
+	<p> (c) 2011 BioConsortium.com. Design by Vincenzo Ampolo, Matteo Ferroni and Tania Suarez.</p>
 </div>
 <!-- end #footer -->
 </body>
