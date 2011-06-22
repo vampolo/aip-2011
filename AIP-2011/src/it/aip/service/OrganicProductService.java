@@ -98,17 +98,20 @@ public class OrganicProductService {
     
     // Metodo per l'estrazione di tutti i BioProducers
     public List<String> getAllCategories() {
+       
         List<OrganicProduct> organic_products = this.getAllOrganicProducts();  
         List<String> categorie = new ArrayList<String>();
         
         for(OrganicProduct x : organic_products){
-            if(x.getProductCategory() != "")
+            System.out.print(x.getProductCategory());
+            if(x.getProductCategory() != "" && x.getProductCategory() != null)
                 categorie.add(x.getProductCategory());
         }
         
         HashSet hashSet = new HashSet(categorie);
         ArrayList categories_no_duplicates = new ArrayList(hashSet);
         Collections.sort(categories_no_duplicates);
+        
         return categories_no_duplicates;
     }
     
