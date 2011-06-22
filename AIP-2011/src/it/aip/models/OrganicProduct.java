@@ -1,24 +1,27 @@
 package it.aip.models;
 
 import java.io.Serializable;
+import java.util.List;
 
-import com.google.appengine.api.datastore.Blob;
 import com.google.appengine.api.datastore.Key;
 import org.slim3.datastore.Attribute;
 import org.slim3.datastore.InverseModelListRef;
 import org.slim3.datastore.Model;
 import org.slim3.datastore.ModelRef;
 
-@SuppressWarnings("serial")
 @Model
 public class OrganicProduct implements Serializable {
     
+    private static final long serialVersionUID = 1L;
+
     @Attribute(primaryKey = true)
     private Key key;
     
     private String productName;         // nome del prodotto    
     private String productCategory;     // categoria di prodotto
-    private Blob productImage;          // immagine del prodotto
+
+    @Attribute(lob = true)
+    private List<ImageFile> images;     // immagini del prodotto
     
     // Riferimento al produttore (one-to-one)
     private ModelRef<BioProducer> producerRef 
@@ -82,11 +85,11 @@ public class OrganicProduct implements Serializable {
         return recipeProductListRef;
     }
     
-    public void setProductImage(Blob productImage) {
-        this.productImage = productImage;
+    public void setImages(List<ImageFile> images) {
+        this.images = images;
     }
-    public Blob getProductImage() {
-        return productImage;
+    public List<ImageFile> getImages() {
+        return images;
     }
     
 }

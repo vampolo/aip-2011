@@ -1,23 +1,26 @@
 package it.aip.models;
 
 import java.io.Serializable;
+import java.util.List;
 
-import com.google.appengine.api.datastore.Blob;
 import com.google.appengine.api.datastore.Key;
 import org.slim3.datastore.Attribute;
 import org.slim3.datastore.InverseModelListRef;
 import org.slim3.datastore.Model;
 
-@SuppressWarnings("serial")
 @Model
 public class Recipe implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Attribute(primaryKey = true)
     private Key key;
     
     private String recipeName;              // nome della ricetta
     private String recipeType;              // tipo di ricetta
-    private Blob recipeImage;               // foto della ricetta
+    
+    @Attribute(lob = true)
+    private List<ImageFile> images;         // immagini della ricetta
     
     // Riferimento ai prodotti (one-to-many)
     @Attribute(persistent = false)
@@ -62,11 +65,11 @@ public class Recipe implements Serializable {
         return recipeProductListRef;
     }
     
-    public void setRecipeImage(Blob recipeImage) {
-        this.recipeImage = recipeImage;
+    public void setImages(List<ImageFile> images) {
+        this.images = images;
     }
-    public Blob getRecipeImage() {
-        return recipeImage;
+    public List<ImageFile> getImages() {
+        return images;
     }
     
 }

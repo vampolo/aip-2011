@@ -13,6 +13,8 @@ import it.aip.service.RecipeService;
 import org.slim3.controller.Controller;
 import org.slim3.controller.Navigation;
 
+import com.google.appengine.api.datastore.Key;
+
 public class IndexController extends Controller {
 
     private BioProducerService bioProducerService = new BioProducerService();
@@ -25,6 +27,7 @@ public class IndexController extends Controller {
         
         // Preparo la lista di produttori, da inserire nella pagina di amministrazione
         List<BioProducer> bioProducersList = bioProducerService.getAllBioProducers();
+        
         requestScope("bioProducersList", bioProducersList);
                
         // Preparo la lista di prodotti, da inserire nella pagina di amministrazione

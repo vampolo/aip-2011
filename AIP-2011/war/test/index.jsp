@@ -16,7 +16,7 @@
 			<span class="BioProducer">
 				<h2>Crea un nuovo BioProducer</h2>
 				
-				<form method="post" action="createBioProducer">
+				<form method="post" enctype="multipart/form-data" action="createBioProducer">
 					<p>Inserire i dati per la creazione di una nuova entità di tipo BioProducer.</p>
 					
 					Nome dell'azienda: <input type="text" name="producerName"><br /><br />
@@ -33,8 +33,13 @@
 					Prodotti offerti:<br />
 					<c:forEach var="product" items="${organicProductsList}">
 						<input type="checkbox" name="${f:h(product.key)}"/> ${f:h(product.productName)} <br />						
-					</c:forEach><br />	
+					</c:forEach><br /><br />
 					
+					Immagini del produttore:<br />
+					<input type="file" name="image1" id="file"><br />
+					<input type="file" name="image2" id="file"><br />
+					<input type="file" name="image3" id="file"><br />
+					<input type="file" name="image4" id="file"><br />
 					<input type="submit" value="submit"/>
 				</form>
 			</span>
@@ -99,6 +104,7 @@
 				<h2>Elenco dei BioProducers</h2>
 				<table>
 					<tr>
+						<td>producerImage</td>
 						<td>producerName</td>
 						<td>infoAzienda</td>
 						<td>productionMethod</td>
@@ -106,6 +112,13 @@
 					</tr>
 					<c:forEach var="producer" items="${bioProducersList}">
 						<tr>
+						
+							<% int imageIndex = 0; %>
+							<c:forEach var="image" items="${producer.images}">
+								<td><img src="GetImage?producerKey=${f:h(producer.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<% imageIndex++; %>
+							</c:forEach>
+							
 							<td>${f:h(producer.producerName)}</td>
 							<td>${f:h(producer.infoAzienda)}</td>
 							<td>${f:h(producer.productionMethod)}</td>

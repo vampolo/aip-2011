@@ -1,6 +1,6 @@
 package it.aip.models;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-20 15:09:54")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-22 18:54:32")
 /** */
 public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.aip.models.OrganicProduct> {
 
@@ -18,9 +18,6 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
 
     /** */
     public final org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct> productCategory = new org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct>(this, "productCategory", "productCategory");
-
-    /** */
-    public final org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Blob> productImage = new org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.OrganicProduct, com.google.appengine.api.datastore.Blob>(this, "productImage", "productImage", com.google.appengine.api.datastore.Blob.class);
 
     /** */
     public final org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct> productName = new org.slim3.datastore.StringAttributeMeta<it.aip.models.OrganicProduct>(this, "productName", "productName");
@@ -44,13 +41,14 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         it.aip.models.OrganicProduct model = new it.aip.models.OrganicProduct();
         model.setGeneralInfo(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("generalInfo")));
         model.setHealthBenefits(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("healthBenefits")));
+        java.util.List<it.aip.models.ImageFile> _images = blobToSerializable((com.google.appengine.api.datastore.Blob) entity.getProperty("images"));
+        model.setImages(_images);
         model.setKey(entity.getKey());
         if (model.getProducerRef() == null) {
             throw new NullPointerException("The property(producerRef) is null.");
         }
         model.getProducerRef().setKey((com.google.appengine.api.datastore.Key) entity.getProperty("producerRef"));
         model.setProductCategory((java.lang.String) entity.getProperty("productCategory"));
-        model.setProductImage((com.google.appengine.api.datastore.Blob) entity.getProperty("productImage"));
         model.setProductName((java.lang.String) entity.getProperty("productName"));
         return model;
     }
@@ -66,12 +64,12 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         }
         entity.setUnindexedProperty("generalInfo", stringToText(m.getGeneralInfo()));
         entity.setUnindexedProperty("healthBenefits", stringToText(m.getHealthBenefits()));
+        entity.setUnindexedProperty("images", serializableToBlob(m.getImages()));
         if (m.getProducerRef() == null) {
             throw new NullPointerException("The property(producerRef) must not be null.");
         }
         entity.setProperty("producerRef", m.getProducerRef().getKey());
         entity.setProperty("productCategory", m.getProductCategory());
-        entity.setProperty("productImage", m.getProductImage());
         entity.setProperty("productName", m.getProductName());
         return entity;
     }
@@ -139,6 +137,10 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
             writer.setNextPropertyName("healthBenefits");
             encoder0.encode(writer, m.getHealthBenefits());
         }
+        if(m.getImages() != null){
+            writer.setNextPropertyName("images");
+            // it.aip.models.ImageFile is not supported.
+        }
         if(m.getKey() != null){
             writer.setNextPropertyName("key");
             encoder0.encode(writer, m.getKey());
@@ -150,10 +152,6 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         if(m.getProductCategory() != null){
             writer.setNextPropertyName("productCategory");
             encoder0.encode(writer, m.getProductCategory());
-        }
-        if(m.getProductImage() != null && m.getProductImage().getBytes() != null){
-            writer.setNextPropertyName("productImage");
-            encoder0.encode(writer, m.getProductImage());
         }
         if(m.getProductName() != null){
             writer.setNextPropertyName("productName");
@@ -175,14 +173,13 @@ public final class OrganicProductMeta extends org.slim3.datastore.ModelMeta<it.a
         m.setGeneralInfo(decoder0.decode(reader, m.getGeneralInfo()));
         reader = rootReader.newObjectReader("healthBenefits");
         m.setHealthBenefits(decoder0.decode(reader, m.getHealthBenefits()));
+        reader = rootReader.newObjectReader("images");
         reader = rootReader.newObjectReader("key");
         m.setKey(decoder0.decode(reader, m.getKey()));
         reader = rootReader.newObjectReader("producerRef");
         decoder0.decode(reader, m.getProducerRef(), maxDepth, currentDepth);
         reader = rootReader.newObjectReader("productCategory");
         m.setProductCategory(decoder0.decode(reader, m.getProductCategory()));
-        reader = rootReader.newObjectReader("productImage");
-        m.setProductImage(decoder0.decode(reader, m.getProductImage()));
         reader = rootReader.newObjectReader("productName");
         m.setProductName(decoder0.decode(reader, m.getProductName()));
         reader = rootReader.newObjectReader("recipeProductListRef");
