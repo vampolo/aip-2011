@@ -6,10 +6,18 @@
 
 <t:basepage>
     <jsp:attribute name="content">
+    <div id="orientationInfo">
+		<ul>
+			<li><a href="/prodotti">Prodotti</a></li>
+		</ul>
+	</div>
+	<div class="post">
     	<c:forEach var="category" items="${categorie}">
 			<a href="/prodotti?categoria=${f:h(category)}">${f:h(category)}</a><br /> 						
 		</c:forEach>
-		<a href="/prodotti?categoria=all">All products</a>  
+		<br/>
+		<a href="/prodotti?categoria=all">Tutti i prodotti</a>
+	</div>  
     </jsp:attribute>
     <jsp:attribute name="sidebar">
     

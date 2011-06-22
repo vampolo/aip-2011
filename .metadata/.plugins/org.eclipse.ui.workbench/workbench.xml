@@ -22,7 +22,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.pde.ui.buildEditor" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="org.eclipse.pde.ui.buildEditor" itemType="typePlaceholder" x="40" y="30"/>
 <coolItem id="org.eclipse.ant.ui.internal.editor.AntEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -51,6 +51,10 @@
 <part id="11"/>
 <part id="12"/>
 <part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
 </presentation>
 </folder>
 </info>
@@ -65,7 +69,7 @@
 </editor>
 <editor id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" partName="index.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/test/index.jsp" title="index.jsp" tooltip="AIP-2011/war/test/index.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/test/index.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="179" selectionOffset="1193" selectionTopPixel="282"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3666" selectionTopPixel="1421"/>
 </editor>
 <editor id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" partName="index.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/index.jsp" title="index.jsp" tooltip="AIP-2011/war/index.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/index.jsp"/>
@@ -85,30 +89,47 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProdottiController.java" partName="ProdottiController.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/controller/ProdottiController.java" title="ProdottiController.java" tooltip="AIP-2011/src/it/aip/controller/ProdottiController.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/controller/ProdottiController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="787" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProductService.java" partName="OrganicProductService.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/service/OrganicProductService.java" title="OrganicProductService.java" tooltip="AIP-2011/src/it/aip/service/OrganicProductService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/service/OrganicProductService.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2485" selectionTopPixel="588"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProduct.java" partName="OrganicProduct.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/models/OrganicProduct.java" title="OrganicProduct.java" tooltip="AIP-2011/src/it/aip/models/OrganicProduct.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="814" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="prodottiByCategory.jsp" partName="prodottiByCategory.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/prodottiByCategory.jsp" title="prodottiByCategory.jsp" tooltip="AIP-2011/war/prodottiByCategory.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/prodottiByCategory.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="588" selectionTopPixel="78"/>
+<editorState selectionHorizontalPixel="0" selectionLength="47" selectionOffset="1155" selectionTopPixel="95"/>
 </editor>
 <editor id="org.eclipse.wst.css.core.csssource.source" name="style.css" partName="style.css" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/css/style.css" title="style.css" tooltip="AIP-2011/war/css/style.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/css/style.css"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7512" selectionTopPixel="8323"/>
 </editor>
-<editor id="org.eclipse.pde.ui.buildEditor" name="build.properties" partName="build.properties" path="/home/goshawk/Projects/aip-2011/AIP-2011/build.properties" title="build.properties" tooltip="AIP-2011/build.properties" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/build.properties"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jst.jsp.core.jspsource.source" name="prodotto.jsp" partName="prodotto.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/prodotto.jsp" title="prodotto.jsp" tooltip="AIP-2011/war/prodotto.jsp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="prodotto.jsp" partName="prodotto.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/prodotto.jsp" title="prodotto.jsp" tooltip="AIP-2011/war/prodotto.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/prodotto.jsp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="994" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="424" selectionTopPixel="17"/>
+</editor>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="prodotti.jsp" partName="prodotti.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/prodotti.jsp" title="prodotti.jsp" tooltip="AIP-2011/war/prodotti.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/prodotti.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="559" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProdottoController.java" partName="ProdottoController.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/controller/ProdottoController.java" title="ProdottoController.java" tooltip="AIP-2011/src/it/aip/controller/ProdottoController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/controller/ProdottoController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="521" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="prodottiByCategory.jsp" partName="prodottiByCategory.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/prodottiByCategory.jsp" title="prodottiByCategory.jsp" tooltip="AIP-2011/war/prodottiByCategory.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/prodottiByCategory.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="644" selectionTopPixel="68"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProduttoriController.java" partName="ProduttoriController.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/controller/ProduttoriController.java" title="ProduttoriController.java" tooltip="AIP-2011/src/it/aip/controller/ProduttoriController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/controller/ProduttoriController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="48" selectionOffset="465" selectionTopPixel="27"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jst.jsp.core.jspsource.source" name="produttore.jsp" partName="produttore.jsp" path="/home/goshawk/Projects/aip-2011/AIP-2011/war/produttore.jsp" title="produttore.jsp" tooltip="AIP-2011/war/produttore.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/war/produttore.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="748" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProduttoreController.java" partName="ProduttoreController.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/controller/ProduttoreController.java" title="ProduttoreController.java" tooltip="AIP-2011/src/it/aip/controller/ProduttoreController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/controller/ProduttoreController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="674" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BioProducerService.java" partName="BioProducerService.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/service/BioProducerService.java" title="BioProducerService.java" tooltip="AIP-2011/src/it/aip/service/BioProducerService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/service/BioProducerService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2595" selectionTopPixel="673"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProduct.java" partName="OrganicProduct.java" path="/home/goshawk/Projects/aip-2011/AIP-2011/src/it/aip/models/OrganicProduct.java" title="OrganicProduct.java" tooltip="AIP-2011/src/it/aip/models/OrganicProduct.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="741" selectionTopPixel="85"/>
 </editor>
 </editors>
 <views>
@@ -272,166 +293,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/prodotti.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/ProdottiController.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/prodottiByCategory.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/AIP-2011/war/css/style.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/service/OrganicProductService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/prodotti.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/ProdottiController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/ProdottoController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/ProduttoriController.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/service/BioProducerService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.pde.ui.buildEditor" path="/AIP-2011/build.properties"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ant.ui.internal.editor.AntEditor" path="/AIP-2011/build.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/prodotto.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/controller/ProduttoreController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/prodotti.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/test/index.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AIP-2011/src/it/aip/models/BioProducer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/AIP-2011/war/produttore.jsp"/>
 </editors>
-<item historyLabel="ProdottiController.java" index="1">
-<position info="not_deleted" x="850" y="0"/>
+<item historyLabel="ProduttoriController.java" index="1">
+<position info="not_deleted" x="465" y="48"/>
 </item>
-<item historyLabel="ProdottiController.java" index="1">
-<position info="not_deleted" x="849" y="0"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position/>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="506" y="0"/>
 </item>
-<item historyLabel="prodotti.jsp" index="0">
-<position info="not_deleted" x="0" y="688"/>
+<item historyLabel="BioProducerService.java" index="2">
+<position info="not_deleted" x="2537" y="0"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position/>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="506" y="0"/>
 </item>
-<item historyLabel="style.css" index="3">
-<position info="not_deleted" x="2676" y="4"/>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="724" y="0"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="380" y="0"/>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="487" y="20"/>
 </item>
-<item historyLabel="style.css" index="3">
-<position info="not_deleted" x="2676" y="4"/>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="342" y="0"/>
 </item>
-<item historyLabel="OrganicProductService.java" index="4">
-<position info="not_deleted" x="2578" y="0"/>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="499" y="0"/>
 </item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="675" y="0"/>
-</item>
-<item historyLabel="style.css" index="3">
-<position info="not_deleted" x="7529" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="604" y="0"/>
 </item>
 <item historyLabel="prodotti.jsp" index="6">
-<position info="not_deleted" x="360" y="146"/>
+<position info="not_deleted" x="559" y="16"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="502" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="635" y="0"/>
 </item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
-</item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position/>
-</item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
-</item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position/>
-</item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
-</item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="617" y="0"/>
-</item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
-</item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="617" y="0"/>
-</item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
-</item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="678" y="0"/>
-</item>
-<item historyLabel="prodotti.jsp" index="6">
-<position info="not_deleted" x="360" y="146"/>
-</item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
-</item>
-<item historyLabel="ProdottiController.java" index="7">
-<position info="not_deleted" x="1015" y="0"/>
-</item>
-<item historyLabel="ProdottiController.java" index="7">
-<position/>
-</item>
-<item historyLabel="BioProducerService.java" index="8">
+<item historyLabel="OrganicProduct.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="OrganicProductService.java" index="4">
-<position info="not_deleted" x="2578" y="0"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="OrganicProductService.java" index="4">
-<position info="not_deleted" x="2182" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="625" y="0"/>
 </item>
-<item historyLabel="OrganicProductService.java" index="4">
-<position info="not_deleted" x="2485" y="0"/>
+<item historyLabel="BioProducerService.java" index="2">
+<position info="not_deleted" x="2595" y="0"/>
 </item>
-<item historyLabel="BioProducerService.java" index="8">
+<item historyLabel="OrganicProduct.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="ProdottiController.java" index="7">
-<position info="not_deleted" x="787" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="625" y="0"/>
 </item>
-<item historyLabel="BioProducerService.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="ProdottiController.java" index="7">
-<position info="not_deleted" x="787" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="625" y="0"/>
 </item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="545" y="15"/>
+<item historyLabel="index.jsp" index="7">
+<position info="not_deleted" x="4327" y="27"/>
 </item>
-<item historyLabel="OrganicProductService.java" index="4">
-<position info="not_deleted" x="2485" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="608" y="0"/>
 </item>
-<item historyLabel="ProdottiController.java" index="7">
-<position info="not_deleted" x="787" y="0"/>
+<item historyLabel="OrganicProduct.java" index="3">
+<position info="not_deleted" x="2163" y="0"/>
 </item>
-<item historyLabel="prodotti.jsp" index="6">
-<position info="not_deleted" x="428" y="0"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position/>
+<item historyLabel="OrganicProduct.java" index="3">
+<position info="not_deleted" x="2197" y="16"/>
 </item>
-<item historyLabel="OrganicProductService.java" index="4">
-<position info="not_deleted" x="2485" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="723" y="0"/>
 </item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="814" y="0"/>
+<item historyLabel="OrganicProduct.java" index="3">
+<position info="not_deleted" x="2197" y="16"/>
 </item>
-<item historyLabel="prodotti.jsp" index="6">
-<position info="not_deleted" x="428" y="0"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
 </item>
-<item historyLabel="OrganicProduct.java" index="5">
-<position info="not_deleted" x="814" y="0"/>
+<item historyLabel="index.jsp" index="7">
+<position info="not_deleted" x="4327" y="27"/>
 </item>
-<item historyLabel="prodottiByCategory.jsp" index="2">
-<position info="not_deleted" x="588" y="0"/>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="723" y="0"/>
 </item>
-<item historyLabel="build.properties" index="9"/>
-<item historyLabel="build.xml" index="10">
-<position info="not_deleted" x="282" y="0"/>
+<item historyLabel="OrganicProduct.java" index="3">
+<position info="not_deleted" x="741" y="11"/>
 </item>
-<item active="true" historyLabel="prodotto.jsp" index="11">
-<position info="not_deleted" x="1127" y="0"/>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="7">
+<position info="not_deleted" x="4327" y="27"/>
+</item>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="723" y="0"/>
+</item>
+<item historyLabel="ProdottoController.java" index="0">
+<position info="not_deleted" x="521" y="0"/>
+</item>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="723" y="0"/>
+</item>
+<item historyLabel="BioProducer.java" index="8">
+<position info="not_deleted" x="438" y="12"/>
+</item>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="678" y="47"/>
+</item>
+<item historyLabel="index.jsp" index="7">
+<position info="not_deleted" x="3666" y="0"/>
+</item>
+<item historyLabel="BioProducer.java" index="8">
+<position info="not_deleted" x="438" y="12"/>
+</item>
+<item historyLabel="prodotto.jsp" index="4">
+<position info="not_deleted" x="424" y="0"/>
+</item>
+<item historyLabel="produttore.jsp" index="9">
+<position info="not_deleted" x="562" y="0"/>
+</item>
+<item historyLabel="BioProducer.java" index="8">
+<position info="not_deleted" x="438" y="12"/>
+</item>
+<item historyLabel="produttore.jsp" index="9">
+<position info="not_deleted" x="562" y="0"/>
+</item>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="499" y="0"/>
+</item>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="723" y="0"/>
+</item>
+<item historyLabel="ProduttoreController.java" index="5">
+<position info="not_deleted" x="674" y="0"/>
+</item>
+<item active="true" historyLabel="produttore.jsp" index="9">
+<position info="not_deleted" x="562" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -451,50 +472,50 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProduct.java" tooltip="AIP-2011/src/it/aip/models/OrganicProduct.java">
+<persistable path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BioProducerService.java" tooltip="AIP-2011/src/it/aip/service/BioProducerService.java">
+<persistable path="/AIP-2011/src/it/aip/service/BioProducerService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProduttoreController.java" tooltip="AIP-2011/src/it/aip/controller/ProduttoreController.java">
+<persistable path="/AIP-2011/src/it/aip/controller/ProduttoreController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProductService.java" tooltip="AIP-2011/src/it/aip/service/OrganicProductService.java">
+<persistable path="/AIP-2011/src/it/aip/service/OrganicProductService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="produttore.jsp" tooltip="AIP-2011/war/produttore.jsp">
+<persistable path="/AIP-2011/war/produttore.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BioProducer.java" tooltip="AIP-2011/src/it/aip/models/BioProducer.java">
+<persistable path="/AIP-2011/src/it/aip/models/BioProducer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProduttoriController.java" tooltip="AIP-2011/src/it/aip/controller/ProduttoriController.java">
+<persistable path="/AIP-2011/src/it/aip/controller/ProduttoriController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="produttori.jsp" tooltip="AIP-2011/war/produttori.jsp">
+<persistable path="/AIP-2011/war/produttori.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="prodottiByCategory.jsp" tooltip="AIP-2011/war/prodottiByCategory.jsp">
+<persistable path="/AIP-2011/war/prodottiByCategory.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProdottoController.java" tooltip="AIP-2011/src/it/aip/controller/ProdottoController.java">
+<persistable path="/AIP-2011/src/it/aip/controller/ProdottoController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="prodotti.jsp" tooltip="AIP-2011/war/prodotti.jsp">
+<persistable path="/AIP-2011/war/prodotti.jsp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="prodotto.jsp" tooltip="AIP-2011/war/prodotto.jsp">
 <persistable path="/AIP-2011/war/prodotto.jsp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.pde.ui.buildEditor" name="build.properties" tooltip="AIP-2011/build.properties">
 <persistable path="/AIP-2011/build.properties"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BioProducerService.java" tooltip="AIP-2011/src/it/aip/service/BioProducerService.java">
-<persistable path="/AIP-2011/src/it/aip/service/BioProducerService.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="style.css" tooltip="AIP-2011/war/css/style.css">
 <persistable path="/AIP-2011/war/css/style.css"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="prodottiByCategory.jsp" tooltip="AIP-2011/war/prodottiByCategory.jsp">
-<persistable path="/AIP-2011/war/prodottiByCategory.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProduct.java" tooltip="AIP-2011/src/it/aip/models/OrganicProduct.java">
-<persistable path="/AIP-2011/src/it/aip/models/OrganicProduct.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrganicProductService.java" tooltip="AIP-2011/src/it/aip/service/OrganicProductService.java">
-<persistable path="/AIP-2011/src/it/aip/service/OrganicProductService.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateBioProducerController.java" tooltip="AIP-2011/src/it/aip/controller/test/CreateBioProducerController.java">
 <persistable path="/AIP-2011/src/it/aip/controller/test/CreateBioProducerController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServizioController.java" tooltip="AIP-2011/src/it/aip/controller/ServizioController.java">
-<persistable path="/AIP-2011/src/it/aip/controller/ServizioController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateRecipeController.java" tooltip="AIP-2011/src/it/aip/controller/test/CreateRecipeController.java">
-<persistable path="/AIP-2011/src/it/aip/controller/test/CreateRecipeController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateOrganicProductController.java" tooltip="AIP-2011/src/it/aip/controller/test/CreateOrganicProductController.java">
-<persistable path="/AIP-2011/src/it/aip/controller/test/CreateOrganicProductController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BioProducerMeta.java" tooltip="AIP-2011/src/it/aip/models/BioProducerMeta.java">
-<persistable path="/AIP-2011/src/it/aip/models/BioProducerMeta.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProdottiController.java" tooltip="AIP-2011/src/it/aip/controller/ProdottiController.java">
-<persistable path="/AIP-2011/src/it/aip/controller/ProdottiController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="prodotti.jsp" tooltip="AIP-2011/war/prodotti.jsp">
-<persistable path="/AIP-2011/war/prodotti.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IndexController.java" tooltip="AIP-2011/src/it/aip/controller/test/IndexController.java">
-<persistable path="/AIP-2011/src/it/aip/controller/test/IndexController.java"/>
 </file>
 </mruList>
 </workbench>

@@ -80,6 +80,15 @@ public class BioProducerService {
     // Metodo per l'estrazione di tutti i BioProducers
     public List<BioProducer> getAllBioProducers() {
         return Datastore.query(bioProducerMeta).asList();
-    } 
+    }
+    
+    /**
+     * Metodo per avere prendere un produttore data la sua chiave
+     * @param key
+     * @return OrganicProduct
+     */
+    public BioProducer getProducer(String key){
+        return Datastore.get(bioProducerMeta, Datastore.stringToKey(key));
+    }
     
 }

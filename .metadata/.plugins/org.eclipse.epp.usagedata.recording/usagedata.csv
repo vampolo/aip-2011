@@ -1,4 +1,5 @@
 what,kind,bundleId,bundleVersion,description,time
+<<<<<<< Updated upstream
 started,bundle,org.eclipse.wst.common.emf,1.2.3.v201012100400,"org.eclipse.wst.common.emf",1308781397171
 started,bundle,org.eclipse.wst.common.emfworkbench.integration,1.2.3.v201012020600,"org.eclipse.wst.common.emfworkbench.integration",1308781397220
 started,bundle,org.eclipse.wst.common.frameworks,1.2.0.v201003040800,"org.eclipse.wst.common.frameworks",1308781397265
@@ -149,3 +150,15 @@ deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",130878229
 activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1308782294397
 deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1308782294440
 activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1308782300236
+=======
+stopped,bundle,org.eclipse.datatools.connectivity.ui,1.2.1.v201010211415,"org.eclipse.datatools.connectivity.ui",1308764702232
+stopped,bundle,org.eclipse.datatools.enablement.ibm.ui,1.0.0.v200906020900,"org.eclipse.datatools.enablement.ibm.ui",1308764702232
+stopped,bundle,org.eclipse.datatools.sqltools.sql.ui,1.0.0.v200906022302,"org.eclipse.datatools.sqltools.sql.ui",1308764702233
+stopped,bundle,org.eclipse.rse.services.dstore,3.1.102.R32x_v201102011435,"org.eclipse.rse.services.dstore",1308764702233
+stopped,bundle,org.eclipse.dstore.core,3.2.2.R32x_v201102121806,"org.eclipse.dstore.core",1308764702233
+stopped,bundle,org.eclipse.dstore.extra,2.1.101.v200907301400,"org.eclipse.dstore.extra",1308764702233
+stopped,bundle,org.eclipse.emf.codegen.ui,2.6.0.v20100914-1218,"org.eclipse.emf.codegen.ui",1308764702233
+stopped,bundle,org.eclipse.emf.common.ui,2.6.0.v20100914-1218,"org.eclipse.emf.common.ui",1308764702233
+stopped,bundle,org.eclipse.epp.mpc.ui,1.0.1.v20100826-2143,"org.eclipse.epp.mpc.ui",1308764702233
+stopped,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201102081640,"org.eclipse.epp.usagedata.ui",1308764702233
+>>>>>>> Stashed changes

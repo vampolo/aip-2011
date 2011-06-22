@@ -115,4 +115,8 @@ public class OrganicProductService {
     public List<OrganicProduct> getProductByCategory(String category) {
         return Datastore.query(organicProductMeta).filter(organicProductMeta.productCategory.equal(category)).asList();
     }
+    
+    public OrganicProduct getProduct(String key){
+        return Datastore.get(organicProductMeta, Datastore.stringToKey(key));
+    }
 }

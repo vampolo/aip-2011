@@ -29,6 +29,7 @@ public class ProdottiController extends Controller {
                 products = organicProductService.getProductByCategory(categoria);
             }
             requestScope("prodotti", products);
+            requestScope("categoria", categoria);
             return forward("prodottiByCategory.jsp");
         }
         List<String> categories = organicProductService.getAllCategories();

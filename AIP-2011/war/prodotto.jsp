@@ -8,19 +8,18 @@
     <jsp:attribute name="content">
       <div id="orientationInfo">
 				<ul>
-					<li>Prodotti</li>
-					<li>Farina Biologica</li>
+					<li><a href="/prodotti">Prodotti</a></li>
+					<li><a href="/prodotto?key=${f:h(prodotto.key)}">${f:h(prodotto.productName)}</a></li>
 				</ul>
+		</div>
+		<div class="post">
+			<h2 class="title"><a href="#">${f:h(prodotto.productName)}</a></h2>
+			<p class="meta">Produttore: ${f:h(prodotto.producerRef.model.producerName)}</p>
+			<img src="images-junk/farina.jpg"></img>
+			<div class="entry">
+				<p>${f:h(prodotto.generalInfo)}</p>
 			</div>
-			<div class="post">
-				<h2 class="title"><a href="#">Farina di grano teneto biologica</a></h2>
-				<p class="meta">Descrizione del prodotto</p>
-				Produttore: <a href="produttoreAziendaAgricolaLodigiana.html">Azienda agricola...</a>
-				<img src="images-junk/farina.jpg"></img>
-				<div class="entry">
-					<p>Farina di grano tenero da agricoltura biologica. Ideale per la produzione di pane e dolci fatti in casa, per chi ama il gusto naturale e leggero della cucina biologica. Confezione da 500 gr</p>
-				</div>
-			</div>
+		</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
     
