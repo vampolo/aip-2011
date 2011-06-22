@@ -4,6 +4,9 @@ import it.aip.models.BioProducer;
 import it.aip.models.OrganicProduct;
 import it.aip.models.OrganicProductMeta;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
@@ -44,5 +47,25 @@ public class OrganicProductService {
     // Metodo per l'estrazione di tutti i BioProducers
     public List<OrganicProduct> getAllOrganicProducts() {
         return Datastore.query(organicProductMeta).asList();
-    } 
+    }
+    
+    // Metodo per l'estrazione di tutti i BioProducers
+    public List<String> getAllCategories() {
+        List<OrganicProduct> organic_products = this.getAllOrganicProducts();  
+        List<String> categorie = new ArrayList<String>();
+        
+        for(OrganicProduct x : organic_products){
+            if(x.getProductCategory() != "")
+                categorie.add(x.getProductCategory());
+        }
+        
+        HashSet hashSet = new HashSet(categorie);
+        ArrayList categories_no_duplicates = new ArrayList(hashSet);
+        Collections.sort(categories_no_duplicates);
+        return categories_no_duplicates;
+    }
+    
+    public List<OrganicProduct> getProductByCategory(String category) {
+        return Datastore.query(organicProductMeta).filter(organicProductMeta.productCategory.equal(category)).asList();
+    }
 }
