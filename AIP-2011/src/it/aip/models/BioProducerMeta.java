@@ -1,6 +1,6 @@
 package it.aip.models;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-20 15:11:29")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-23 00:31:03")
 /** */
 public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.models.BioProducer> {
 
@@ -12,9 +12,6 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
 
     /** */
     public final org.slim3.datastore.StringUnindexedAttributeMeta<it.aip.models.BioProducer> practicalInfo = new org.slim3.datastore.StringUnindexedAttributeMeta<it.aip.models.BioProducer>(this, "practicalInfo", "practicalInfo");
-
-    /** */
-    public final org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.BioProducer, com.google.appengine.api.datastore.Blob> producerImage = new org.slim3.datastore.UnindexedAttributeMeta<it.aip.models.BioProducer, com.google.appengine.api.datastore.Blob>(this, "producerImage", "producerImage", com.google.appengine.api.datastore.Blob.class);
 
     /** */
     public final org.slim3.datastore.StringAttributeMeta<it.aip.models.BioProducer> producerName = new org.slim3.datastore.StringAttributeMeta<it.aip.models.BioProducer>(this, "producerName", "producerName");
@@ -39,10 +36,11 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
     @Override
     public it.aip.models.BioProducer entityToModel(com.google.appengine.api.datastore.Entity entity) {
         it.aip.models.BioProducer model = new it.aip.models.BioProducer();
+        java.util.List<it.aip.models.ImageFile> _images = blobToSerializable((com.google.appengine.api.datastore.Blob) entity.getProperty("images"));
+        model.setImages(_images);
         model.setInfoAzienda(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("infoAzienda")));
         model.setKey(entity.getKey());
         model.setPracticalInfo(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("practicalInfo")));
-        model.setProducerImage((com.google.appengine.api.datastore.Blob) entity.getProperty("producerImage"));
         model.setProducerName((java.lang.String) entity.getProperty("producerName"));
         model.setProductionMethod(textToString((com.google.appengine.api.datastore.Text) entity.getProperty("productionMethod")));
         return model;
@@ -57,9 +55,9 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         } else {
             entity = new com.google.appengine.api.datastore.Entity(kind);
         }
+        entity.setUnindexedProperty("images", serializableToBlob(m.getImages()));
         entity.setUnindexedProperty("infoAzienda", stringToText(m.getInfoAzienda()));
         entity.setUnindexedProperty("practicalInfo", stringToText(m.getPracticalInfo()));
-        entity.setProperty("producerImage", m.getProducerImage());
         entity.setProperty("producerName", m.getProducerName());
         entity.setUnindexedProperty("productionMethod", stringToText(m.getProductionMethod()));
         return entity;
@@ -115,6 +113,10 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         it.aip.models.BioProducer m = (it.aip.models.BioProducer) model;
         writer.beginObject();
         org.slim3.datastore.json.Default encoder0 = new org.slim3.datastore.json.Default();
+        if(m.getImages() != null){
+            writer.setNextPropertyName("images");
+            // it.aip.models.ImageFile is not supported.
+        }
         if(m.getInfoAzienda() != null){
             writer.setNextPropertyName("infoAzienda");
             encoder0.encode(writer, m.getInfoAzienda());
@@ -126,10 +128,6 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         if(m.getPracticalInfo() != null){
             writer.setNextPropertyName("practicalInfo");
             encoder0.encode(writer, m.getPracticalInfo());
-        }
-        if(m.getProducerImage() != null && m.getProducerImage().getBytes() != null){
-            writer.setNextPropertyName("producerImage");
-            encoder0.encode(writer, m.getProducerImage());
         }
         if(m.getProducerName() != null){
             writer.setNextPropertyName("producerName");
@@ -151,14 +149,13 @@ public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.
         it.aip.models.BioProducer m = new it.aip.models.BioProducer();
         org.slim3.datastore.json.JsonReader reader = null;
         org.slim3.datastore.json.Default decoder0 = new org.slim3.datastore.json.Default();
+        reader = rootReader.newObjectReader("images");
         reader = rootReader.newObjectReader("infoAzienda");
         m.setInfoAzienda(decoder0.decode(reader, m.getInfoAzienda()));
         reader = rootReader.newObjectReader("key");
         m.setKey(decoder0.decode(reader, m.getKey()));
         reader = rootReader.newObjectReader("practicalInfo");
         m.setPracticalInfo(decoder0.decode(reader, m.getPracticalInfo()));
-        reader = rootReader.newObjectReader("producerImage");
-        m.setProducerImage(decoder0.decode(reader, m.getProducerImage()));
         reader = rootReader.newObjectReader("producerName");
         m.setProducerName(decoder0.decode(reader, m.getProducerName()));
         reader = rootReader.newObjectReader("productionMethod");

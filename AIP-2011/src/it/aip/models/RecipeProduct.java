@@ -7,9 +7,11 @@ import org.slim3.datastore.ModelRef;
 
 import com.google.appengine.api.datastore.Key;
 
-@SuppressWarnings("serial")
 @Model
 public class RecipeProduct implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Attribute(primaryKey = true)
     private Key key;
 
