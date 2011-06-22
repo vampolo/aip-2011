@@ -1,6 +1,7 @@
 package it.aip.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.appengine.api.datastore.Key;
@@ -20,7 +21,7 @@ public class BioProducer implements Serializable {
     private String producerName;            // nome del produttore
     
     @Attribute(lob = true)
-    private List<ImageFile> images;         // immagini del produttore
+    private List<ImageFile> images = new ArrayList<ImageFile>();         // immagini del produttore
     
     // Riferimento ai prodotti (one-to-many)
     @Attribute(persistent = false)

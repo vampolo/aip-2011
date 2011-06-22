@@ -1,6 +1,7 @@
 package it.aip.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.appengine.api.datastore.Key;
@@ -21,7 +22,7 @@ public class OrganicProduct implements Serializable {
     private String productCategory;     // categoria di prodotto
 
     @Attribute(lob = true)
-    private List<ImageFile> images;     // immagini del prodotto
+    private List<ImageFile> images = new ArrayList<ImageFile>();     // immagini del prodotto
     
     // Riferimento al produttore (one-to-one)
     private ModelRef<BioProducer> producerRef 

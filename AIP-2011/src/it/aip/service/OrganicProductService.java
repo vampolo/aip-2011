@@ -69,9 +69,9 @@ public class OrganicProductService {
         int imageCount = 4;
         for(int i = 1; i<=imageCount; i++){
             // Per ogni immagine che l'utente può inserire
-            if(requestParameters.containsKey("image" + i)){
+            if(requestParameters.containsKey("imageProduct" + i)){
                 // Estraggo dalla request
-                FileItem tempFile = (FileItem) requestParameters.get("image" + i);
+                FileItem tempFile = (FileItem) requestParameters.get("imageProduct" + i);
                 ImageFile tempImage = new ImageFile(tempFile.getFileName(), tempFile.getContentType(), tempFile.getData());
                 
                 // La aggiungo alla lista del produttore

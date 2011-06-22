@@ -36,10 +36,10 @@
 					</c:forEach><br /><br />
 					
 					Immagini del produttore:<br />
-					<input type="file" name="image1" id="file"><br />
-					<input type="file" name="image2" id="file"><br />
-					<input type="file" name="image3" id="file"><br />
-					<input type="file" name="image4" id="file"><br />
+					<input type="file" name="imageProducer1" id="file"><br />
+					<input type="file" name="imageProducer2" id="file"><br />
+					<input type="file" name="imageProducer3" id="file"><br />
+					<input type="file" name="imageProducer4" id="file"><br />
 					<input type="submit" value="submit"/>
 				</form>
 			</span>
@@ -47,7 +47,7 @@
 			<span class="OrganicProduct">
 				<h2>Crea un nuovo OrganicProduct</h2>
 				
-				<form method="post" action="createOrganicProduct">
+				<form method="post" enctype="multipart/form-data" action="createOrganicProduct">
 					<p>Inserire i dati per la creazione di una nuova entità di tipo OrganicProduct.</p>
 					
 					Nome del prodotto: <input type="text" name="productName"><br /><br />
@@ -70,8 +70,13 @@
 					Ricette correlate:<br />
 					<c:forEach var="recipe" items="${recipesList}">
 						<input type="checkbox" name="${f:h(recipe.key)}"/> ${f:h(recipe.recipeName)} <br />						
-					</c:forEach><br />					
+					</c:forEach><br /><br />
 					
+					Immagini del prodotto:<br />
+					<input type="file" name="imageProduct1" id="file"><br />
+					<input type="file" name="imageProduct2" id="file"><br />
+					<input type="file" name="imageProduct3" id="file"><br />
+					<input type="file" name="imageProduct4" id="file"><br />			
 					<input type="submit" value="submit"/>
 				</form>
 			</span>
@@ -79,7 +84,7 @@
 			<span class="Recipe">
 				<h2>Crea una nuova Recipe</h2>
 				
-				<form method="post" action="createRecipe">
+				<form method="post" enctype="multipart/form-data" action="createRecipe">
 					<p>Inserire i dati per la creazione di una nuova entità di tipo Recipe.</p>
 					
 					Nome della ricetta: <input type="text" name="recipeName"><br /><br />
@@ -92,7 +97,13 @@
 					Prodotti correlati:<br />
 					<c:forEach var="product" items="${organicProductsList}">
 						<input type="checkbox" name="${f:h(product.key)}"/> ${f:h(product.productName)} <br />						
-					</c:forEach><br />		
+					</c:forEach><br /><br />	
+					
+					Immagini della ricetta:<br />
+					<input type="file" name="imageRecipe1" id="file"><br />
+					<input type="file" name="imageRecipe2" id="file"><br />
+					<input type="file" name="imageRecipe3" id="file"><br />
+					<input type="file" name="imageRecipe4" id="file"><br />	
 
 					<input type="submit" value="submit"/>
 				</form>
@@ -100,29 +111,29 @@
 		</div>
 		
 		<div id="itemsLists">
+			<% int imageIndex = 0; %>
 			<span class="BioProducer">
 				<h2>Elenco dei BioProducers</h2>
 				<table>
 					<tr>
-						<td>producerImage</td>
 						<td>producerName</td>
 						<td>infoAzienda</td>
 						<td>productionMethod</td>
 						<td>practicalInfo</td>
+						<td>producerImages</td>
 					</tr>
 					<c:forEach var="producer" items="${bioProducersList}">
-						<tr>
-						
-							<% int imageIndex = 0; %>
-							<c:forEach var="image" items="${producer.images}">
-								<td><img src="GetImage?producerKey=${f:h(producer.key)}&imageIndex=<%= imageIndex %>" /></td>
-								<% imageIndex++; %>
-							</c:forEach>
-							
+						<tr>							
 							<td>${f:h(producer.producerName)}</td>
 							<td>${f:h(producer.infoAzienda)}</td>
 							<td>${f:h(producer.productionMethod)}</td>
-							<td>${f:h(producer.practicalInfo)}</td>							
+							<td>${f:h(producer.practicalInfo)}</td>	
+							
+							<% imageIndex = 0; %>
+							<c:forEach var="image" items="${producer.images}">
+								<td><img src="GetImage?producerKey=${f:h(producer.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<% imageIndex++; %>
+							</c:forEach>						
 						</tr>
 					</c:forEach>				
 				</table>
@@ -142,7 +153,12 @@
 							<td>${f:h(product.productName)}</td>
 							<td>${f:h(product.productCategory)}</td>
 							<td>${f:h(product.generalInfo)}</td>
-							<td>${f:h(product.healthBenefits)}</td>					
+							<td>${f:h(product.healthBenefits)}</td>			
+							<% imageIndex = 0; %>
+							<c:forEach var="image" items="${product.images}">
+								<td><img src="GetImage?productKey=${f:h(product.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<% imageIndex++; %>
+							</c:forEach>		
 						</tr>
 					</c:forEach>				
 				</table>
@@ -161,6 +177,11 @@
 							<td>${f:h(recipe.recipeName)}</td>
 							<td>${f:h(recipe.recipeType)}</td>
 							<td>${f:h(recipe.recipeDescription)}</td>
+							<% imageIndex = 0; %>
+							<c:forEach var="image" items="${recipe.images}">
+								<td><img src="GetImage?recipeKey=${f:h(recipe.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<% imageIndex++; %>
+							</c:forEach>	
 						</tr>
 					</c:forEach>				
 				</table>

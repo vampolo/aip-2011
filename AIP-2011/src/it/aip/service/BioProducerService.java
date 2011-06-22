@@ -55,9 +55,9 @@ public class BioProducerService {
         int imageCount = 4;
         for(int i = 1; i<=imageCount; i++){
             // Per ogni immagine che l'utente può inserire
-            if(requestParameters.containsKey("image" + i)){
+            if(requestParameters.containsKey("imageProducer" + i)){
                 // Estraggo dalla request
-                FileItem tempFile = (FileItem) requestParameters.get("image" + i);
+                FileItem tempFile = (FileItem) requestParameters.get("imageProducer" + i);
                 ImageFile tempImage = new ImageFile(tempFile.getFileName(), tempFile.getContentType(), tempFile.getData());
                 
                 // La aggiungo alla lista del produttore

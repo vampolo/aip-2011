@@ -1,6 +1,6 @@
 package it.aip.models;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-22 18:54:26")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2011-06-22 19:08:33")
 /** */
 public final class BioProducerMeta extends org.slim3.datastore.ModelMeta<it.aip.models.BioProducer> {
 

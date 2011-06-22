@@ -1,6 +1,7 @@
 package it.aip.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.appengine.api.datastore.Key;
@@ -20,7 +21,7 @@ public class Recipe implements Serializable {
     private String recipeType;              // tipo di ricetta
     
     @Attribute(lob = true)
-    private List<ImageFile> images;         // immagini della ricetta
+    private List<ImageFile> images = new ArrayList<ImageFile>();         // immagini della ricetta
     
     // Riferimento ai prodotti (one-to-many)
     @Attribute(persistent = false)
