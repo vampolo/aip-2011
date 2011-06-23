@@ -21,7 +21,7 @@
 					<h3>Gallery</h3>
 					<p>
 						
-							<c:forEach var="image" items="${produttore.images}"  varStatus ="status">
+							<c:forEach var="image" items="${produttore.images}" varStatus="status">
 								<td><img src="/GetImage?producerKey=${f:h(produttore.key)}&imageIndex=${status.index}" /></td>
 							</c:forEach>	
 					</p>
