@@ -21,10 +21,9 @@
 					<img src="GetImage?producerKey=${f:h(produttore.key)}&imageIndex=0" />
 					<h3>Informazioni</h3>
 					<p>
-						<% int imageIndex = 0; %>
-							<c:forEach var="image" items="${produttore.images}">
-								<td><img src="/GetImage?producerKey=${f:h(produttore.key)}&imageIndex=<%= imageIndex %>" /></td>
-								<% imageIndex++; %>
+			
+							<c:forEach var="image" items="${produttore.images}" varStatus="status">
+								<td><img src="/GetImage?producerKey=${f:h(produttore.key)}&imageIndex=${status.index}" /></td>
 							</c:forEach>	
 					</p>
 				</div>
