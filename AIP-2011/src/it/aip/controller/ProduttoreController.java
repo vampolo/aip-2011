@@ -22,6 +22,18 @@ public class ProduttoreController extends Controller {
             page = "L'azienda";
             
         requestScope("page", page);
+        
+        if(page.equals("metodi")){
+            return forward("produttore_metodi.jsp");
+        }
+        
+        if(page.equals("info")){
+            return forward("produttore_info.jsp");
+        }
+        
+        if(page.equals("gallery")){
+            return forward("produttore_gallery.jsp");
+        }
 
         return forward("produttore.jsp");
     }

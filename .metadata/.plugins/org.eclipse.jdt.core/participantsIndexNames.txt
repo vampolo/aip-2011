@@ -1,5 +1,0 @@
-INDEX VERSION 1.126
-/home/goshawk/Projects/aip-2011/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/642080040.index
-/AIP-2011
-/home/goshawk/Projects/aip-2011/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/16635948.index
-/AIP-2011
