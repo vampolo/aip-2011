@@ -131,7 +131,7 @@
 							
 							<% imageIndex = 0; %>
 							<c:forEach var="image" items="${producer.images}">
-								<td><img src="GetImage?producerKey=${f:h(producer.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<td><img src="/GetImage?producerKey=${f:h(producer.key)}&imageIndex=<%= imageIndex %>" /></td>
 								<% imageIndex++; %>
 							</c:forEach>						
 						</tr>
@@ -156,7 +156,7 @@
 							<td>${f:h(product.healthBenefits)}</td>			
 							<% imageIndex = 0; %>
 							<c:forEach var="image" items="${product.images}">
-								<td><img src="GetImage?productKey=${f:h(product.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<td><img src="/GetImage?productKey=${f:h(product.key)}&imageIndex=<%= imageIndex %>" /></td>
 								<% imageIndex++; %>
 							</c:forEach>		
 						</tr>
@@ -179,7 +179,7 @@
 							<td>${f:h(recipe.recipeDescription)}</td>
 							<% imageIndex = 0; %>
 							<c:forEach var="image" items="${recipe.images}">
-								<td><img src="GetImage?recipeKey=${f:h(recipe.key)}&imageIndex=<%= imageIndex %>" /></td>
+								<td><img src="/GetImage?recipeKey=${f:h(recipe.key)}&imageIndex=<%= imageIndex %>" /></td>
 								<% imageIndex++; %>
 							</c:forEach>	
 						</tr>

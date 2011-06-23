@@ -21,11 +21,11 @@
 					<img src="GetImage?producerKey=${f:h(produttore.key)}&imageIndex=0" />
 					<h3>Informazioni</h3>
 					<p>
-						<% imageIndex = 0; %>
-						<c:forEach var="image" items="${produttore.images}">
-								<td><img src="GetImage?producerKey=${f:h(produttore.key)}&imageIndex=<%= imageIndex %>" /></td>
+						<% int imageIndex = 0; %>
+							<c:forEach var="image" items="${produttore.images}">
+								<td><img src="/GetImage?producerKey=${f:h(produttore.key)}&imageIndex=<%= imageIndex %>" /></td>
 								<% imageIndex++; %>
-						</c:forEach>	
+							</c:forEach>	
 					</p>
 				</div>
 			</div>
