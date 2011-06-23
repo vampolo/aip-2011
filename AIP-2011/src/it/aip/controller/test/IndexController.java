@@ -1,6 +1,5 @@
 package it.aip.controller.test;
 
-import java.util.Iterator;
 import java.util.List;
 
 import it.aip.models.BioProducer;
@@ -12,8 +11,6 @@ import it.aip.service.RecipeService;
 
 import org.slim3.controller.Controller;
 import org.slim3.controller.Navigation;
-
-import com.google.appengine.api.datastore.Key;
 
 public class IndexController extends Controller {
 

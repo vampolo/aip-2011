@@ -21,17 +21,29 @@
 			</div>
 				
 				<div id="navigationPattern">
-					<ul>	
-						<c:if test="${not empty precedente}">
-							<li><a href="/prodotto?key=${f:h(precedente.key)}&fromCategory=${f:h(categoria)}">Prodotto precedente: ${f:h(precedente.productName)}</a></li>
-						</c:if>
-					
+					<ul>
 						<c:if test="${not empty categoria}">	
+							<c:if test="${not empty precedente}">
+								<li><a href="/prodotto?key=${f:h(precedente.key)}&fromCategory=${f:h(categoria)}">Prodotto precedente: ${f:h(precedente.productName)}</a></li>
+							</c:if>
+						
 							<li><a href="/prodotti?categoria=${f:h(categoria)}">Torna all'indice</a></li>			     
+							
+							<c:if test="${not empty successivo}">
+								<li><a href="/prodotto?key=${f:h(successivo.key)}&fromCategory=${f:h(categoria)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
+							</c:if>
 						</c:if>
 						
-						<c:if test="${not empty successivo}">
-							<li><a href="/prodotto?key=${f:h(successivo.key)}&fromCategory=${f:h(categoria)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
+						<c:if test="${not empty ricetta}">	
+							<c:if test="${not empty precedente}">
+								<li><a href="/prodotto?key=${f:h(precedente.key)}&fromRecipe=${f:h(ricetta)}">Prodotto precedente: ${f:h(precedente.productName)}</a></li>
+							</c:if>
+						
+							<li><a href="/ricetta?key=${f:h(ricetta)}">Torna alla ricetta</a></li>			     
+							
+							<c:if test="${not empty successivo}">
+								<li><a href="/prodotto?key=${f:h(successivo.key)}&fromRecipe=${f:h(ricetta)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
+							</c:if>
 						</c:if>
 					</ul>
 				</div>

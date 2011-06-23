@@ -1,7 +1,6 @@
 package it.aip.controller;
 
 import it.aip.models.BioProducer;
-import it.aip.models.OrganicProduct;
 import it.aip.service.BioProducerService;
 
 import org.slim3.controller.Controller;

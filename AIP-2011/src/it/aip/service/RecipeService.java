@@ -1,5 +1,6 @@
 package it.aip.service;
 
+import it.aip.models.BioProducer;
 import it.aip.models.ImageFile;
 import it.aip.models.OrganicProduct;
 import it.aip.models.Recipe;
@@ -45,7 +46,11 @@ public class RecipeService {
                     
                     RecipeProduct recipeProduct = new RecipeProduct();
                     recipeProduct.getProductRef().setModel(product);
-                    recipeProduct.getRecipeRef().setModel(recipe);                    
+                    recipeProduct.getRecipeRef().setModel(recipe);
+                    
+                    Transaction tx = Datastore.beginTransaction();
+                    Datastore.put(recipeProduct);
+                    tx.commit();
                     
                     // TEST CODE
                     // System.out.println(recipeProduct.getProductRef().getModel().getProductName() + " linkato a " + recipeProduct.getRecipeRef().getModel().getRecipeName());
@@ -83,6 +88,10 @@ public class RecipeService {
     // Metodo per l'estrazione di tutti i BioProducers
     public List<Recipe> getAllRecipes() {
         return Datastore.query(recipeMeta).asList();
-    } 
-
+    }
+    
+    public Recipe getRecipe(String key){
+        return Datastore.get(recipeMeta, Datastore.stringToKey(key));
+    }
+    
 }

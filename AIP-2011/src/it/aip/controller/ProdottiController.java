@@ -4,10 +4,6 @@ import it.aip.models.*;
 import it.aip.service.OrganicProductService;
 import org.slim3.controller.Controller;
 import org.slim3.controller.Navigation;
-import org.slim3.datastore.Datastore;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 
 public class ProdottiController extends Controller {

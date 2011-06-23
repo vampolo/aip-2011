@@ -56,7 +56,11 @@ public class OrganicProductService {
                     
                     RecipeProduct recipeProduct = new RecipeProduct();
                     recipeProduct.getProductRef().setModel(product);
-                    recipeProduct.getRecipeRef().setModel(recipe);                    
+                    recipeProduct.getRecipeRef().setModel(recipe);   
+                    
+                    Transaction tx = Datastore.beginTransaction();
+                    Datastore.put(recipeProduct);
+                    tx.commit();
                     
                     // TEST CODE
                     // System.out.println(recipeProduct.getProductRef().getModel().getProductName() + " linkato a " + recipeProduct.getRecipeRef().getModel().getRecipeName());

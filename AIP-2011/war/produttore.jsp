@@ -8,7 +8,7 @@
     <jsp:attribute name="content">
       <div id="orientationInfo">
 				<ul>
-					<li><a href="/produttore">Produttori</a></li>
+					<li><a href="/produttori">Produttori</a></li>
 					<li><a href="/produttore?key=${f:h(produttore.key)}">${f:h(produttore.producerName)}</li>
 					<li>${f:h(page)}</li>
 				</ul>
