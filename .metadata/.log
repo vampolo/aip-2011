@@ -5291,3 +5291,21 @@ HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
 	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@267a0bc6),
 	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@5f99f62e,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@621bfc9d)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@5d7a7de4)),sourcePriority=1064961)
 >>>>>>> Stashed changes
+!SESSION 2011-06-23 01:14:28.539 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-06-23 01:45:09.144
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-06-23 01:45:09.144
+!MESSAGE Conflict for 'org.eclipse.wst.jsdt.ui.edit.text.java.open.editor':
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@323662bd),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@4574aee5,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@640159b3)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77c30993)),sourcePriority=1064961)
+HandlerActivation(commandId=org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,
+	handler=ActionHandler(org.eclipse.wst.jsdt.ui.actions.OpenAction@323662bd),
+	expression=AndExpression(AndExpression(org.eclipse.ui.SubActionBars$1@4574aee5,ActivePartExpression(org.eclipse.ui.navigator.resources.ProjectExplorer@640159b3)),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77c30993)),sourcePriority=1064961)

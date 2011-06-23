@@ -15,7 +15,7 @@
 		<div class="post">
 			<h2 class="title"><a href="#">${f:h(prodotto.productName)}</a></h2>
 			<p class="meta">Produttore: ${f:h(prodotto.producerRef.model.producerName)}</p>
-			<img src="images-junk/farina.jpg"></img>
+			<img src="GetImage?productKey=${f:h(prodotto.key)}&imageIndex=0" />
 			<div class="entry">
 				<p>${f:h(prodotto.generalInfo)}</p>
 			</div>
