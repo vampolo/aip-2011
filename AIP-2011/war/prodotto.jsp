@@ -19,10 +19,26 @@
 			<div class="entry">
 				<p>${f:h(prodotto.generalInfo)}</p>
 			</div>
+				
+				<div id="navigationPattern">
+					<ul>	
+						<c:if test="${not empty precedente}">
+							<li><a href="/prodotto?key=${f:h(precedente.key)}&fromCategory=${f:h(categoria)}">Prodotto precedente: ${f:h(precedente.productName)}</a></li>
+						</c:if>
+					
+						<c:if test="${not empty categoria}">	
+							<li><a href="/prodotti?categoria=${f:h(categoria)}">Torna all'indice</a></li>			     
+						</c:if>
+						
+						<c:if test="${not empty successivo}">
+							<li><a href="/prodotto?key=${f:h(successivo.key)}&fromCategory=${f:h(categoria)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
+						</c:if>
+					</ul>
+				</div>
 		</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
-    
+
     </jsp:attribute>
     <jsp:body>
     </jsp:body>

@@ -103,7 +103,7 @@ public class OrganicProductService {
         List<String> categorie = new ArrayList<String>();
         
         for(OrganicProduct x : organic_products){
-            System.out.print(x.getProductCategory());
+            // System.out.print(x.getProductCategory());
             if(x.getProductCategory() != "" && x.getProductCategory() != null)
                 categorie.add(x.getProductCategory());
         }

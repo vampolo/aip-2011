@@ -22,7 +22,7 @@
 	<c:forEach var="p" items="${prodotti}">
 		<tr>
     		<td><a>immagine</a></td>
-    		<td><a href="/prodotto?key=${f:h(p.key)}">${f:h(p.productName)}</a></td>
+    		<td><a href="/prodotto?key=${f:h(p.key)}&fromCategory=${f:h(categoria)}">${f:h(p.productName)}</a></td>
     		<td>test2</td>
     	</tr> 						
 	</c:forEach>
