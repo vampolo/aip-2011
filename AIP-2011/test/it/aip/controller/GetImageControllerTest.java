@@ -9,10 +9,10 @@ public class GetImageControllerTest extends ControllerTestCase {
 
     @Test
     public void run() throws Exception {
-        tester.start("/GetImage");
+        tester.start("/test/GetImage");
         GetImageController controller = tester.getController();
         assertThat(controller, is(notNullValue()));
         assertThat(tester.isRedirect(), is(false));
-        assertThat(tester.getDestinationPath(), is("/GetImage.jsp"));
+        assertThat(tester.getDestinationPath(), is(nullValue()));
     }
 }
