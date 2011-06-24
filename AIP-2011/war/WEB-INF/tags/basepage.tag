@@ -10,6 +10,8 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Bio Consortium</title>
 <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js" type="text/javascript"></script>
+<script src="/js/popupCode.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -25,9 +27,9 @@
 			<li><a href="/">Home</a>			
 			<li><a href="/produttori">Produttori</a></li>
 			<li><a href="/prodotti">Prodotti</a></li>
-			<li><a href="/offerte">Offerte</a></li>
+			<li><a class="notImplemented" href="#">Offerte</a></li>
 			<li><a href="/ricette">Ricette</a></li>
-			<li><a href="/diete">Diete</a></li>
+			<li><a class="notImplemented" href="#">Diete</a></li>
 			<li><a href="/biologico">Cibo Biologico</a>
 			<li><a href="/servizio">Il Servizo</a></li>
 			<li><a href="/consorzio">Il Consorzio</a></li>
@@ -58,5 +60,17 @@
 	<p> (c) 2011 BioConsortium.com. Design by Vincenzo Ampolo, Matteo Ferroni and Tania Suarez.</p>
 </div>
 <!-- end #footer -->
+
+<!-- popup code -->
+<div id="popupNotImplemented">
+		<a id="popupNotImplementedClose" href="#">x</a>
+		<h1>Pagina non implementata!</h1>
+		<p id="popupText">
+			La pagina richiesta non è stata implementata. Leggere la documentazione per la lista delle pagine implementate.
+		</p>
+	</div>
+<div id="backgroundPopup"></div>
+<!-- end popup code -->
+
 </body>
 </html>
