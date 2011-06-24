@@ -24,6 +24,18 @@
 						${f:h(produttore.productionMethod)}
 					</p>
 				</div>
+				
+				<div id="navigationPattern">
+					<ul>
+						<c:if test="${not empty prodotto}">
+							<li><a href="/prodotto?key=${f:h(prodotto)}&fromProducer=${f:h(produttore.key)}">Torna al prodotto</a></li>			     
+						</c:if>
+						
+						<c:if test="${ empty prodotto}">
+							<li><a href="/produttori">Torna ai produttori</a></li>			     
+						</c:if>
+					</ul>
+				</div>
 			</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
@@ -37,7 +49,7 @@
 					</ul>
 				</li>
 				<li>
-					<h2><a href="#">Prodotti correlati</a></h2>
+					<h2><a href="/prodotti?fromProducer=${f:h(produttore.key)}">Prodotti correlati</a></h2>
 				</li>
 			</ul>
     </jsp:attribute>

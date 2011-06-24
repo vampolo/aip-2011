@@ -3,9 +3,11 @@ package it.aip.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import it.aip.models.BioProducer;
 import it.aip.models.OrganicProduct;
 import it.aip.models.Recipe;
 import it.aip.models.RecipeProduct;
+import it.aip.service.BioProducerService;
 import it.aip.service.OrganicProductService;
 import it.aip.service.RecipeService;
 
@@ -16,6 +18,7 @@ public class ProdottoController extends Controller {
 
     private OrganicProductService ops = new OrganicProductService();
     private RecipeService rs = new RecipeService();
+    private BioProducerService bp = new BioProducerService();
     
     @Override
     public Navigation run() throws Exception {
@@ -35,8 +38,7 @@ public class ProdottoController extends Controller {
             for (RecipeProduct rp : ricetta.getRecipeProductListRef().getModelList()) {
                 OrganicProduct p = rp.getProductRef().getModel();
                 products.add(p);
-            }
-                      
+            }                      
         }
         
         String categoria = request.getParameter("fromCategory");
@@ -51,6 +53,16 @@ public class ProdottoController extends Controller {
             }           
                          
         }
+        
+        String producerKey = request.getParameter("fromProducer");
+        if(producerKey != null){
+            requestScope("produttore", producerKey);
+            BioProducer produttore = bp.getProducer(producerKey);            
+            // Creo la lista degli ingredienti
+            products = produttore.getProductsListRef().getModelList();                  
+        }
+
+        
         
         // Se c'è almeno un prodotto, lo cerco ed estraggo il precedente e il successivo
         boolean found = false;

@@ -14,7 +14,9 @@
 		</div>
 		<div class="post">
 			<h2 class="title"><a href="#">${f:h(prodotto.productName)}</a></h2>
-			<p class="meta">Produttore: ${f:h(prodotto.producerRef.model.producerName)}</p>
+			<p class="meta">
+				Produttore: 
+					<a href="/produttore?key=${f:h(prodotto.producerRef.model.key)}&fromProduct=${f:h(prodotto.key)}">${f:h(prodotto.producerRef.model.producerName)}</a></p>
 			<img src="GetImage?productKey=${f:h(prodotto.key)}&imageIndex=0" />
 			<div class="entry">
 				<p>${f:h(prodotto.generalInfo)}</p>
@@ -45,12 +47,24 @@
 								<li><a href="/prodotto?key=${f:h(successivo.key)}&fromRecipe=${f:h(ricetta)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
 							</c:if>
 						</c:if>
+						
+						<c:if test="${not empty produttore}">	
+							<c:if test="${not empty precedente}">
+								<li><a href="/prodotto?key=${f:h(precedente.key)}&fromProducer=${f:h(produttore)}">Prodotto precedente: ${f:h(precedente.productName)}</a></li>
+							</c:if>
+						
+							<li><a href="/prodotti?fromProducer=${f:h(produttore)}">Torna ai prodotti</a></li>			     
+							
+							<c:if test="${not empty successivo}">
+								<li><a href="/prodotto?key=${f:h(successivo.key)}&fromProducer=${f:h(produttore)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
+							</c:if>
+						</c:if>
 					</ul>
 				</div>
 		</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
-
+		<h2><a href="/ricette?fromProduct=${f:h(prodotto.key)}">Ricette correlate</a></h2>
     </jsp:attribute>
     <jsp:body>
     </jsp:body>

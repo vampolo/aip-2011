@@ -16,6 +16,11 @@ public class ProduttoreController extends Controller {
         BioProducer produttore = bps.getProducer(key);
         requestScope("produttore", produttore);
         
+        String prodotto = request.getParameter("fromProduct");
+        if(prodotto != null){
+            requestScope("prodotto", prodotto);
+        }
+        
         String page = request.getParameter("page");
         if(page == null)
             page = "L'azienda";

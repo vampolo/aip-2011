@@ -9,7 +9,7 @@
      <div id="orientationInfo">
 		<ul>
 			<li><a href="/ricette">Ricette</a></li>
-			<li><a href="/ricette?fromProduct=${f:h(prodotto.key)}">Prodotto: ${f:h(prodotto.productName)}</a></li>
+			<li><a href="/prodotto?key=${f:h(prodotto.key)}">Prodotto: ${f:h(prodotto.productName)}</a></li>
 		</ul>
 	</div>
 	<div class="post">
