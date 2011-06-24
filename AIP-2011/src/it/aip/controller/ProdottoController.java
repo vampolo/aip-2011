@@ -25,38 +25,7 @@ public class ProdottoController extends Controller {
         
         OrganicProduct precedente = null, successivo = null;
         List<OrganicProduct> products = new ArrayList<OrganicProduct>();;
-        
-        String categoria = request.getParameter("fromCategory");
-        if(categoria != null){
-            requestScope("categoria", categoria);
-            
-            if(categoria.equals("all")){
-                products = ops.getAllOrganicProducts();
-            }
-            else {
-                products = ops.getProductByCategory(categoria);
-            }
-            
-            // Se c'è almeno un prodotto, lo cerco ed estraggo il precedente e il successivo
-            boolean found = false;
-            for(int i = 0; i<products.size() && products.size()>1 && !found; i++){
-                OrganicProduct currentProduct = products.get(i);
-                precedente = products.get((i-1+products.size())%products.size());
-                successivo = products.get((i+1)%products.size()); 
-                
-                if(product.getKey().equals(currentProduct.getKey())){
-                    found = true;
-                }                
-            }
-            
-            
-            if(precedente != null && successivo != null){
-                requestScope("precedente", precedente);
-                requestScope("successivo", successivo);
-            }               
-        }
-        
-        
+                        
         String recipeKey = request.getParameter("fromRecipe");
         if(recipeKey != null){
             requestScope("ricetta", recipeKey);
@@ -67,25 +36,44 @@ public class ProdottoController extends Controller {
                 OrganicProduct p = rp.getProductRef().getModel();
                 products.add(p);
             }
-            
-            // Se c'è almeno un prodotto, lo cerco ed estraggo il precedente e il successivo
-            boolean found = false;
-            for(int i = 0; i<products.size() && products.size()>1 && !found; i++){
-                OrganicProduct currentProduct = products.get(i);
-                precedente = products.get((i-1+products.size())%products.size());
-                successivo = products.get((i+1)%products.size()); 
-                
-                if(product.getKey().equals(currentProduct.getKey())){
-                    found = true;
-                }                
-            }
-            
-            if(precedente != null && successivo != null){
-                requestScope("precedente", precedente);
-                requestScope("successivo", successivo);
-            }               
+                      
         }
         
+        String categoria = request.getParameter("fromCategory");
+        if(categoria != null){
+            requestScope("categoria", categoria);
+            
+            if(categoria.equals("all")){
+                products = ops.getAllOrganicProducts();
+            }
+            else {
+                products = ops.getProductByCategory(categoria);
+            }           
+                         
+        }
+        
+        // Se c'è almeno un prodotto, lo cerco ed estraggo il precedente e il successivo
+        boolean found = false;
+        for(int i = 0; i<products.size() && products.size()>1 && !found; i++){
+            OrganicProduct currentProduct = products.get(i);
+            
+            if(i>0)
+                precedente = products.get(i-1);
+            else
+                precedente = null;
+            
+            if(i+1<products.size())
+                successivo = products.get(i+1); 
+            else
+                successivo = null;
+            
+            if(product.getKey().equals(currentProduct.getKey())){
+                found = true;
+            }                
+        }
+        
+        requestScope("precedente", precedente);
+        requestScope("successivo", successivo);
         
         return forward("prodotto.jsp");
     }

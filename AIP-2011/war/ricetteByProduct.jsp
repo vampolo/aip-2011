@@ -8,8 +8,8 @@
     <jsp:attribute name="content">
      <div id="orientationInfo">
 		<ul>
-			<li><a href="/prodotti">Prodotti</a></li>
-			<li><a href="/prodotti?categoria=${f:h(categoria)}">Categoria: ${f:h(categoria)}</a></li>
+			<li><a href="/ricette">Ricette</a></li>
+			<li><a href="/ricette?fromProduct=${f:h(prodotto.key)}">Prodotto: ${f:h(prodotto.productName)}</a></li>
 		</ul>
 	</div>
 	<div class="post">
@@ -17,13 +17,11 @@
     <tr>
 		<th>Immagine</th>
 		<th>Nome</th>
-		<th>Ricette</th>
 	</tr>
-	<c:forEach var="p" items="${prodotti}">
+	<c:forEach var="r" items="${ricette}">
 		<tr>
-    		<td><img src="GetImage?productKey=${f:h(p.key)}&imageIndex=0" /></td>
-    		<td><a href="/prodotto?key=${f:h(p.key)}&fromCategory=${f:h(categoria)}">${f:h(p.productName)}</a></td>
-    		<td><a href="/ricette?fromProduct=${f:h(p.key)}">Ricette per prodotto: ${f:h(p.productName)}</a></td>
+    		<td><img src="GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
+    		<td><a href="/ricetta?key=${f:h(r.key)}&fromProduct=${f:h(prodotto.key)}">${f:h(r.recipeName)}</a></td>
     	</tr> 						
 	</c:forEach>
     </table>

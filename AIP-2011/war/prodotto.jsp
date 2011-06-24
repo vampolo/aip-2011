@@ -39,7 +39,7 @@
 								<li><a href="/prodotto?key=${f:h(precedente.key)}&fromRecipe=${f:h(ricetta)}">Prodotto precedente: ${f:h(precedente.productName)}</a></li>
 							</c:if>
 						
-							<li><a href="/ricetta?key=${f:h(ricetta)}">Torna alla ricetta</a></li>			     
+							<li><a href="/ricetta?key=${f:h(ricetta)}&fromProduct=${f:h(prodotto.key)}">Torna alla ricetta</a></li>			     
 							
 							<c:if test="${not empty successivo}">
 								<li><a href="/prodotto?key=${f:h(successivo.key)}&fromRecipe=${f:h(ricetta)}">Prodotto successivo: ${f:h(successivo.productName)}</a></li>
