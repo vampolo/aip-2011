@@ -8,7 +8,7 @@
     <jsp:attribute name="content">
       <div id="orientationInfo">
 				<ul>
-					<li>Il Consorzio</li>
+					<li><a href="/consorzio">Il Consorzio</a></li>
 					<li>Informazioni generali</li>
 				</ul>
 			</div>
@@ -29,7 +29,7 @@ La nostra cooperativa è un'azienda a totale conduzione biologica in conformità
       <ul>
 				<li>
 					<ul>
-						<li>Il nostro consorzio</li>
+						<li>Informazioni generali</li>
 						<li><a href="/contatti">Contatti</a></li>
 					</ul>
 				</li>
