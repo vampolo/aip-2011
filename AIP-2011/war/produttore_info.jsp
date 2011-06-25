@@ -42,9 +42,9 @@
     <ul>
 				<li>
 					<ul>
-						<li>L'azienda</li>
+						<li><a href="/produttore?key=${f:h(produttore.key)}">L'azienda</a></li>
 						<li><a href="/produttore?key=${f:h(produttore.key)}&page=metodi">Metodi di produzione</a></li>
-						<li><a href="/produttore?key=${f:h(produttore.key)}&page=info">Informazioni pratiche</a></li>
+						<li>Informazioni e contatti</li>
 						<li><a href="/produttore?key=${f:h(produttore.key)}&page=gallery">Photo Gallery</a></li>
 					</ul>
 				</li>

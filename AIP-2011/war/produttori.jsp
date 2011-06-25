@@ -12,9 +12,23 @@
 		</ul>
 	</div>
 	<div class="post">
-		<c:forEach var="p" items="${produttori}">
-			<a href="/produttore?key=${f:h(p.key)}">${f:h(p.producerName)}</a><br /> 						
-		</c:forEach>
+		<table class="list_items">
+			<thead>
+			    <tr>
+			      <th>Immagine</th>
+			      <th>Nome</th>
+			    </tr>
+			</thead>
+			<tbody>
+			<c:forEach var="p" items="${produttori}">
+			<tr>
+				<td><img src="/GetImage?producerKey=${f:h(p.key)}&imageIndex=0" /></td>
+				<td><a href="/produttore?key=${f:h(p.key)}">${f:h(p.producerName)}</a></td>
+			</tr>
+			</c:forEach>
+			</tbody>
+		</table>
+		
 	</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">

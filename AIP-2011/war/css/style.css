@@ -1,11 +1,4 @@
 
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-*/
-
-/* MAIN */
 body {
 	margin: 0;
 	padding: 0;
@@ -486,6 +479,20 @@ h2 a {
 
 .list li {
 	margin-bottom: 6px;
+}
+
+.list_items {
+	width:100%;
+}
+
+.list_items td, .list_items th {
+	border:1px solid #ccc;
+	text-align:center;
+	border-radius:3px;
+}
+
+.list_items th {
+	border:1px solid #aaa;
 }
 
 #footer {
