@@ -12,23 +12,28 @@
 		</ul>
 	</div>
 	<div class="post">
-		<table class="list_items">
-			<thead>
-			    <tr>
-			      <th>Immagine</th>
-			      <th>Nome</th>
-			    </tr>
-			</thead>
-			<tbody>
-			<c:forEach var="p" items="${produttori}">
-			<tr>
-				<td><img src="/GetImage?producerKey=${f:h(p.key)}&imageIndex=0" /></td>
-				<td><a href="/produttore?key=${f:h(p.key)}">${f:h(p.producerName)}</a></td>
-			</tr>
-			</c:forEach>
-			</tbody>
-		</table>
+		<c:if test="${ not empty produttori}">
+			<table class="list_items">
+				<thead>
+				    <tr>
+				      <th>Immagine</th>
+				      <th>Nome</th>
+				    </tr>
+				</thead>
+				<tbody>
+				<c:forEach var="p" items="${produttori}">
+				<tr>
+					<td><img src="/GetImage?producerKey=${f:h(p.key)}&imageIndex=0" /></td>
+					<td><a href="/produttore?key=${f:h(p.key)}">${f:h(p.producerName)}</a></td>
+				</tr>
+				</c:forEach>
+				</tbody>
+			</table>
+		</c:if>
 		
+		<c:if test="${ empty produttori}">
+			<h4>Nessun produttore trovato</h4>
+		</c:if>
 	</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">

@@ -13,8 +13,11 @@
 	</div>
 	<div class="post">
 	<ul>
-	<li><a href="/prodotti?categoria=all">Tutti i prodotti</a></li>
+	
 	<li><a href="/prodotti?select=category">Prodotti per categoria</a></li>
+	
+	
+	<li><a href="/prodotti?categoria=all">Tutti i prodotti</a></li>
 	</ul>
 	</div> 
     </jsp:attribute>

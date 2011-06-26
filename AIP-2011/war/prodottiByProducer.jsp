@@ -13,18 +13,25 @@
 		</ul>
 	</div>
 	<div class="post">
-    <table class="contentlist">
-    <tr>
-		<th>Immagine</th>
-		<th>Nome</th>
-	</tr>
-	<c:forEach var="p" items="${prodotti}">
-		<tr>
-    		<td><img src="GetImage?productKey=${f:h(p.key)}&imageIndex=0" /></td>
-    		<td><a href="/prodotto?key=${f:h(p.key)}&fromProducer=${f:h(produttore.key)}">${f:h(p.productName)}</a></td>
-    	</tr> 						
-	</c:forEach>
-    </table>
+		<c:if test="${ not empty prodotti}">
+		    <table class="contentlist">
+			    <tr>
+					<th>Immagine</th>
+					<th>Nome</th>
+				</tr>
+				<c:forEach var="p" items="${prodotti}">
+					<tr>
+			    		<td><img src="GetImage?productKey=${f:h(p.key)}&imageIndex=0" /></td>
+			    		<td><a href="/prodotto?key=${f:h(p.key)}&fromProducer=${f:h(produttore.key)}">${f:h(p.productName)}</a></td>
+			    	</tr> 						
+				</c:forEach>
+		    </table>
+    	</c:if>
+    	
+    	<c:if test="${ empty prodotti}">
+			<h4>Nessun prodotto trovato per il produttore selezionato</h4>
+		</c:if>
+    
     </div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">

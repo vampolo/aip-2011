@@ -13,22 +13,27 @@
 		</ul>
 	</div>
     <div class="post">
-		<table class="list_items">
-			<thead>
-			    <tr>
-			      <th>Immagine</th>
-			      <th>Nome</th>
-			    </tr>
-			</thead>
-			<tbody>
-			<c:forEach var="r" items="${ricette}">
-			<tr>
-				<td><img src="/GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
-				<td><a href="/ricetta?key=${f:h(r.key)}&fromProduct=${f:h(prodotto.key)}">${f:h(r.recipeName)}</a></td>
-			</tr>
-			</c:forEach>
-			</tbody>
-		</table>
+    	<c:if test="${ not empty ricette}">
+			<table class="list_items">
+					<thead>
+					    <tr>
+					      <th>Immagine</th>
+					      <th>Nome</th>
+					    </tr>
+					</thead>
+				<tbody>
+					<c:forEach var="r" items="${ricette}">
+						<tr>
+							<td><img src="/GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
+							<td><a href="/ricetta?key=${f:h(r.key)}&fromProduct=${f:h(prodotto.key)}">${f:h(r.recipeName)}</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</c:if>
+		<c:if test="${ empty ricette}">
+			<h4>Nessuna ricetta trovata per il prodotto selezionato</h4>
+		</c:if>
 	</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
