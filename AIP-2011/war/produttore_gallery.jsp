@@ -19,14 +19,14 @@
 				
 				<div class="entry">
 					<h3>Gallery</h3>
-					<p>
-						
+					<br/>
+					<div id="gallery">
 							<c:forEach var="image" items="${produttore.images}" varStatus="status">
-								<td><img src="/GetImage?producerKey=${f:h(produttore.key)}&imageIndex=${status.index}" /></td>
+								<img src="/GetImage?producerKey=${f:h(produttore.key)}&imageIndex=${status.index}" />
 							</c:forEach>	
-					</p>
+					</div>
 				</div>
-				
+				<br/>
 				<div id="navigationPattern">
 					<ul>
 						<c:if test="${not empty prodotto}">

@@ -219,11 +219,8 @@ h2 a {
 }
 
 #orientationInfo{
-    margin:0 0 15px;
-    padding:0;
-    height:1%;
-    font-size:11px;
-    line-height:13px;
+    margin:0 0 10px;
+    font-size:13px;
     list-style:none;
     overflow:hidden;
     text-transform:uppercase;
@@ -493,6 +490,18 @@ h2 a {
 
 .list_items th {
 	border:1px solid #aaa;
+}
+
+#navigationPattern ul {
+	text-align:center;
+	margin: 0;
+	padding: 0;
+}
+
+#navigationPattern ul li{
+	margin: 0 10px;
+	text-align:center;
+	display: inline-block;	
 }
 
 #footer {

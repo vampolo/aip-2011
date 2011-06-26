@@ -12,20 +12,24 @@
 			<li><a href="/prodotto?key=${f:h(prodotto.key)}">Prodotto: ${f:h(prodotto.productName)}</a></li>
 		</ul>
 	</div>
-	<div class="post">
-    <table class="contentlist">
-    <tr>
-		<th>Immagine</th>
-		<th>Nome</th>
-	</tr>
-	<c:forEach var="r" items="${ricette}">
-		<tr>
-    		<td><img src="GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
-    		<td><a href="/ricetta?key=${f:h(r.key)}&fromProduct=${f:h(prodotto.key)}">${f:h(r.recipeName)}</a></td>
-    	</tr> 						
-	</c:forEach>
-    </table>
-    </div>
+    <div class="post">
+		<table class="list_items">
+			<thead>
+			    <tr>
+			      <th>Immagine</th>
+			      <th>Nome</th>
+			    </tr>
+			</thead>
+			<tbody>
+			<c:forEach var="r" items="${ricette}">
+			<tr>
+				<td><img src="/GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
+				<td><a href="/ricetta?key=${f:h(r.key)}">${f:h(r.recipeName)}</a></td>
+			</tr>
+			</c:forEach>
+			</tbody>
+		</table>
+	</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
     

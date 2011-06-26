@@ -6,12 +6,18 @@
 
 <t:basepage>
     <jsp:attribute name="content">
-      <h1>Content here</h1>
+      <div id="orientationInfo">
+		<ul>
+			<li><a href="/">Home</a></li>
+		</ul>
+	 </div>
+	<div class="post">
+		<img class="home-image" src="/images-junk/agricoltura_biologica.jpg">
+	</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
-      <p id="copyright">Sidebar here</p>
+     
     </jsp:attribute>
     <jsp:body>
-        <p>Hi I'm the heart of the message</p>
     </jsp:body>
 </t:basepage>

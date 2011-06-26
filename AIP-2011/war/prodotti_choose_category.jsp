@@ -6,34 +6,32 @@
 
 <t:basepage>
     <jsp:attribute name="content">
-      <div id="orientationInfo">
+    <div id="orientationInfo">
 		<ul>
-			<li><a href="/ricette">Ricette</a></li>
+			<li><a href="/prodotti">Prodotti</a></li>
+			<li><a href="/prodotti?select=category">Categoria</a></li>
 		</ul>
 	</div>
 	<div class="post">
 		<table class="list_items">
 			<thead>
 			    <tr>
-			      <th>Immagine</th>
-			      <th>Nome</th>
+			      <th>Categoria</th>
 			    </tr>
 			</thead>
 			<tbody>
-			<c:forEach var="r" items="${ricette}">
+			<c:forEach var="category" items="${categorie}">
 			<tr>
-				<td><img src="/GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
-				<td><a href="/ricetta?key=${f:h(r.key)}">${f:h(r.recipeName)}</a></td>
+				<td><a href="/prodotti?categoria=${f:h(category)}">${f:h(category)}</a></td>
 			</tr>
 			</c:forEach>
 			</tbody>
 		</table>
-	</div>
-	</jsp:attribute>
+	</div> 
+    </jsp:attribute>
     <jsp:attribute name="sidebar">
     
     </jsp:attribute>
     <jsp:body>
     </jsp:body>
 </t:basepage>
-

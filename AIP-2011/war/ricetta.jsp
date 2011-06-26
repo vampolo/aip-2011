@@ -18,14 +18,8 @@
 				
 				<div class="entry">
 					<img src="GetImage?recipeKey=${f:h(ricetta.key)}&imageIndex=0" />
-					<h3>Ingredienti</h3>
-					<p>
-						<c:forEach var="ingrediente" items="${ingredienti}">
-							<a href="/prodotto?key=${f:h(ingrediente.key)}&fromRecipe=${f:h(ricetta.key)}">${f:h(ingrediente.productName)}</a><br />
-						</c:forEach>
-					</p>
 					
-					<h3>Descrizione</h3>
+					<h3>Informazioni</h3>
 					<p>
 						${f:h(ricetta.recipeDescription)}
 					</p>
@@ -62,7 +56,12 @@
 				</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
-    
+    <h2>Prodotti correlati</h2>
+					<p>
+						<c:forEach var="ingrediente" items="${ingredienti}">
+							<a href="/prodotto?key=${f:h(ingrediente.key)}&fromRecipe=${f:h(ricetta.key)}">${f:h(ingrediente.productName)}</a><br />
+						</c:forEach>
+					</p>
     </jsp:attribute>
     <jsp:body>
     </jsp:body>

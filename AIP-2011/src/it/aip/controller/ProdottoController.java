@@ -23,6 +23,7 @@ public class ProdottoController extends Controller {
     @Override
     public Navigation run() throws Exception {
         String key = request.getParameter("key");
+        String page = request.getParameter("page");
         OrganicProduct product = ops.getProduct(key);
         requestScope("prodotto", product);    
         
@@ -86,6 +87,8 @@ public class ProdottoController extends Controller {
         
         requestScope("precedente", precedente);
         requestScope("successivo", successivo);
+        
+        requestScope("page", page);
         
         return forward("prodotto.jsp");
     }

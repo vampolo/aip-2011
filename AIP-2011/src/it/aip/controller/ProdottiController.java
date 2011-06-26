@@ -20,6 +20,7 @@ public class ProdottiController extends Controller {
         List<OrganicProduct> products = new ArrayList<OrganicProduct>();
         
         String categoria = request.getParameter("categoria");
+        String select = request.getParameter("select");
         if(categoria != null){
             if(categoria.equals("all")){
                 products = organicProductService.getAllOrganicProducts();
@@ -44,6 +45,12 @@ public class ProdottiController extends Controller {
         
         List<String> categories = organicProductService.getAllCategories();
         requestScope("categorie", categories);
+        
+        if(select != null){
+            if(select.equals("category")){
+                return forward("prodotti_choose_category.jsp");
+            }
+        }
         
         return forward("prodotti.jsp");
     }

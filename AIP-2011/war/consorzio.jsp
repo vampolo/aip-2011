@@ -9,7 +9,7 @@
       <div id="orientationInfo">
 				<ul>
 					<li><a href="/consorzio">Il Consorzio</a></li>
-					<li>Informazioni generali</li>
+					<li><a href="/consorzio">Informazioni generali</a></li>
 				</ul>
 			</div>
 			<div class="post">

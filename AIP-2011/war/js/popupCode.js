@@ -45,4 +45,9 @@ $(document).ready(function(){
 	$("#backgroundPopup").click(function(){
 		disablePopup();
 	});
+	
+	$("#gallery").galleria({
+        width: 600,
+        height: 600
+    });
 });
