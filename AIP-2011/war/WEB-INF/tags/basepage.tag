@@ -10,10 +10,10 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Bio Consortium</title>
 <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-<script src="http://code.jquery.com/jquery-1.6.1.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.6.1.min.js" type="text/javascript"></script>
 <script src="/js/popupCode.js" type="text/javascript"></script>
-<script src="/js/galleria/galleria-1.2.4.js"></script>
-<script src="/js/galleria/themes/classic/galleria.classic.js"></script>
+<script src="/js/galleria/galleria-1.2.4.min.js"></script>
+<script src="/js/galleria/themes/classic/galleria.classic.min.js"></script>
 </head>
 <body>
 <div id="wrapper">

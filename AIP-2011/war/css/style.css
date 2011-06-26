@@ -488,9 +488,24 @@ h2 a {
 	border-radius:3px;
 }
 
+.list_items td img {
+	width:100px;
+}
 .list_items th {
 	border:1px solid #aaa;
 }
+
+.posthome {
+	float:left;
+	margin: 0 20px 20px 0;
+	width:280px;
+}
+
+.posthome img {
+	width:280px;
+	height:220px;
+}
+	
 
 #navigationPattern ul {
 	text-align:center;
