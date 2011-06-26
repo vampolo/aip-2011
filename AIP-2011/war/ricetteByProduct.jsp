@@ -24,7 +24,7 @@
 			<c:forEach var="r" items="${ricette}">
 			<tr>
 				<td><img src="/GetImage?recipeKey=${f:h(r.key)}&imageIndex=0" /></td>
-				<td><a href="/ricetta?key=${f:h(r.key)}">${f:h(r.recipeName)}</a></td>
+				<td><a href="/ricetta?key=${f:h(r.key)}&fromProduct=${f:h(prodotto.key)}">${f:h(r.recipeName)}</a></td>
 			</tr>
 			</c:forEach>
 			</tbody>

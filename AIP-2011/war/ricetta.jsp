@@ -30,25 +30,25 @@
 					<ul>
 						<c:if test="${not empty prodotto}">	
 							<c:if test="${not empty precedente}">
-								<li><a href="/ricetta?key=${f:h(precedente.key)}&fromProduct=${f:h(prodotto)}">Ricetta precedente: ${f:h(precedente.recipeName)}</a></li>
+								<li><a href="/ricetta?key=${f:h(precedente.key)}&fromProduct=${f:h(prodotto)}">Ricetta precedente</a></li>
 							</c:if>
 						
-							<li><a href="/ricette?fromProduct=${f:h(prodotto)}">Torna alle ricette per prodotto</a></li>			     
+							<li><a href="/ricette?fromProduct=${f:h(prodotto)}">Torna all'indice</a></li>			     
 							
 							<c:if test="${not empty successivo}">
-								<li><a href="/ricetta?key=${f:h(successivo.key)}&fromProduct=${f:h(prodotto)}">Ricetta successiva: ${f:h(successivo.recipeName)}</a></li>
+								<li><a href="/ricetta?key=${f:h(successivo.key)}&fromProduct=${f:h(prodotto)}">Ricetta successiva</a></li>
 							</c:if>
 						</c:if>
 						
 						<c:if test="${ empty prodotto}">	
 							<c:if test="${not empty precedente}">
-								<li><a href="/ricetta?key=${f:h(precedente.key)}">Ricetta precedente: ${f:h(precedente.recipeName)}</a></li>
+								<li><a href="/ricetta?key=${f:h(precedente.key)}">Ricetta precedente</a></li>
 							</c:if>
 						
-							<li><a href="/ricette">Torna a tutte le ricette</a></li>			     
+							<li><a href="/ricette">Torna all'indice</a></li>			     
 							
 							<c:if test="${not empty successivo}">
-								<li><a href="/ricetta?key=${f:h(successivo.key)}">Ricetta successiva: ${f:h(successivo.recipeName)}</a></li>
+								<li><a href="/ricetta?key=${f:h(successivo.key)}">Ricetta successiva</a></li>
 							</c:if>
 						</c:if>
 						
