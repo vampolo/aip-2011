@@ -21,7 +21,7 @@
 					<img src="GetImage?producerKey=${f:h(produttore.key)}&imageIndex=0" />
 					<h3>Informazioni</h3>
 					<p>
-						${f:h(produttore.infoAzienda)}
+						${produttore.infoAzienda}
 					</p>
 				</div>
 				

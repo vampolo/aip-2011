@@ -54,12 +54,11 @@
 </div>
 <div id="footer-content">
 	<div class="column1">
-		<h2>BioConsortium srl</h2>
-		<p>BioConsortium è il il consorzio di produttori locali ... etc</p>
+		<h2>Progetto per il corso di Applicazioni Ipermediali aa 2010/2011</h2>
+		<p>Di Vincenzo Ampolo (750336), Matteo Ferroni (755737) e Tania Suarez (748927).</p>
 	</div>
 </div>
 <div id="footer">
-	<p> (c) 2011 BioConsortium.com. Design by Vincenzo Ampolo, Matteo Ferroni and Tania Suarez.</p>
 </div>
 <!-- end #footer -->
 

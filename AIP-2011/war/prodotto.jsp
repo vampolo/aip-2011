@@ -21,11 +21,11 @@
 				<img src="GetImage?productKey=${f:h(prodotto.key)}&imageIndex=0" />
 				<c:if test="${not empty page && page == 'healthBenefits'}">
 					<h2>Vantaggi per la salute</h2>
-					<p>${f:h(prodotto.healthBenefits)}</p>
+					<p>${prodotto.healthBenefits}</p>
 				</c:if>
 				<c:if test="${empty page}">
 					<h2>Informazioni sul prodotto</h2>
-					<p>${f:h(prodotto.generalInfo)}</p>
+					<p>${prodotto.generalInfo}</p>
 				</c:if>
 			</div>
 				

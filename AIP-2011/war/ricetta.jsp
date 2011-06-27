@@ -21,7 +21,7 @@
 					
 					<h3>Informazioni</h3>
 					<p>
-						${f:h(ricetta.recipeDescription)}
+						${ricetta.recipeDescription}
 					</p>
 				</div>
 			</div>
