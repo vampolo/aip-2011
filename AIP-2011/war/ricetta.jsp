@@ -45,7 +45,7 @@
 								<li><a href="/ricetta?key=${f:h(precedente.key)}">Ricetta precedente</a></li>
 							</c:if>
 						
-							<li><a href="/ricette">Torna all'indice</a></li>			     
+							<li><a href="/ricette?fromProduct=all">Torna all'indice</a></li>			     
 							
 							<c:if test="${not empty successivo}">
 								<li><a href="/ricetta?key=${f:h(successivo.key)}">Ricetta successiva</a></li>
