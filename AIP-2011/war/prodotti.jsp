@@ -12,13 +12,23 @@
 		</ul>
 	</div>
 	<div class="post">
-	<ul>
-	
-	<li><a href="/prodotti?select=category">Prodotti per categoria</a></li>
-	
-	
-	<li><a href="/prodotti?categoria=all">Tutti i prodotti</a></li>
-	</ul>
+		<table class="list_items">
+			<thead>
+			    <tr>
+			      <th>Categoria</th>
+			    </tr>
+			</thead>
+			<tbody>
+			<c:forEach var="category" items="${categorie}">
+			<tr>
+				<td><a href="/prodotti?categoria=${f:h(category)}">${f:h(category)}</a></td>
+			</tr>
+			</c:forEach>
+			<tr>
+				<td><a href="/prodotti?categoria=all">Tutti i prodotti</a></td>
+			</tr>
+			</tbody>
+		</table>
 	</div> 
     </jsp:attribute>
     <jsp:attribute name="sidebar">

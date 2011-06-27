@@ -67,6 +67,17 @@
 		<p>Che cosa è il cibo biologico? Perchè crediamo sia importante? Perchè adottare uno stile di vita sano?... <a href="/produttori">continua</a></p>
 	</div>
 	<div style="clear: both;">&nbsp;</div>
+	<div class="posthome">
+		<a href="#" class="notImplemented"><img class="home-image" src="/images-junk/diete.jpg"></a>
+		<h1>Diete</h1>
+		<p>Ecco le nostre proposte di diete per una vita sana ed equilibrata! ... <a href="#" class="notImplemented">continua</a></p>
+	</div>
+	<div class="posthome">
+		<a href="#" class="notImplemented"><img class="home-image" src="/images-junk/offerte.jpg"></a>
+		<h1>Offerte</h1>
+		<p>Non perdere le nostre offerte stagionali! ... <a href="#" class="notImplemented">continua</a></p>
+	</div>
+	<div style="clear: both;">&nbsp;</div>
 	</div>
 	<!-- end #page -->
 </div>
