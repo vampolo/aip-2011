@@ -54,7 +54,7 @@
 </div>
 <div id="footer-content">
 	<div class="column1">
-		<h2>Progetto per il corso di Applicazioni Ipermediali aa 2010/2011</h2>
+		<h2>Progetto per il corso di Applicazioni Ipermediali <br /> A.A. 2010/2011</h2>
 		<p>Di Vincenzo Ampolo (750336), Matteo Ferroni (755737) e Tania Suarez (748927).</p>
 	</div>
 </div>

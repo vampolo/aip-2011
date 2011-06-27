@@ -72,49 +72,60 @@
     </jsp:attribute>
     <jsp:attribute name="sidebar">
     <ul>
-				<li>
-					<ul>
-						<c:if test="${not empty page}">
-							<c:if test="${not empty produttore}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromProducer=${f:h(produttore)}">Informazioni generali</a></li>
-							</c:if>
-							<c:if test="${not empty ricetta}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromRecipe=${f:h(ricetta)}">Informazioni generali</a></li>
-							</c:if>
-							<c:if test="${not empty categoria}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromCategory=${f:h(categoria)}">Informazioni generali</a></li>
-							</c:if>
-							<c:if test="${empty produttore && empty ricetta && empty categoria}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}">Informazioni generali</a></li>
-							</c:if>
+			<li>
+				<ul>
+					<c:if test="${not empty page}">
+						<c:if test="${not empty produttore}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromProducer=${f:h(produttore)}">Informazioni generali</a></li>
 						</c:if>
-						<c:if test="${empty page}">
-							<li>Informazioni generali</li>
+						<c:if test="${not empty ricetta}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromRecipe=${f:h(ricetta)}">Informazioni generali</a></li>
 						</c:if>
-						<c:if test="${empty page}">
-							<c:if test="${not empty produttore}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromProducer=${f:h(produttore)}&page=healthBenefits">Vantaggi per la salute</a></li>
-							</c:if>
-							<c:if test="${not empty ricetta}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromRecipe=${f:h(ricetta)}&page=healthBenefits">Vantaggi per la salute</a></li>
-							</c:if>
-							<c:if test="${not empty categoria}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromCategory=${f:h(categoria)}&page=healthBenefits">Vantaggi per la salute</a></li>
-							</c:if>
-							<c:if test="${empty produttore && empty ricetta && empty categoria}">
-								<li><a href="/prodotto?key=${f:h(prodotto.key)}&page=healthBenefits">Vantaggi per la salute</a></li>
-							</c:if>
+						<c:if test="${not empty categoria}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromCategory=${f:h(categoria)}">Informazioni generali</a></li>
 						</c:if>
-						<c:if test="${not empty page}">
-							<li>Vantaggi per la salute</li>
+						<c:if test="${empty produttore && empty ricetta && empty categoria}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}">Informazioni generali</a></li>
 						</c:if>
-					</ul>
-				</li>
-			</ul>
-		<h2>Potrebbe interessarti</h2>
-		<ul>
-		<li><a href="/ricette?fromProduct=${f:h(prodotto.key)}">Ricette che utilizzano questo prodotto</a></li>
+					</c:if>
+					<c:if test="${empty page}">
+						<li>Informazioni generali</li>
+					</c:if>
+					<c:if test="${empty page}">
+						<c:if test="${not empty produttore}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromProducer=${f:h(produttore)}&page=healthBenefits">Vantaggi per la salute</a></li>
+						</c:if>
+						<c:if test="${not empty ricetta}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromRecipe=${f:h(ricetta)}&page=healthBenefits">Vantaggi per la salute</a></li>
+						</c:if>
+						<c:if test="${not empty categoria}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&fromCategory=${f:h(categoria)}&page=healthBenefits">Vantaggi per la salute</a></li>
+						</c:if>
+						<c:if test="${empty produttore && empty ricetta && empty categoria}">
+							<li><a href="/prodotto?key=${f:h(prodotto.key)}&page=healthBenefits">Vantaggi per la salute</a></li>
+						</c:if>
+					</c:if>
+					<c:if test="${not empty page}">
+						<li>Vantaggi per la salute</li>
+					</c:if>
+				</ul>
+			</li>
 		</ul>
+	<br />
+	
+	<h3>Offerte correlate</h3>
+		<ul>
+			<li><a class="notImplemented" href="#">Cesta per single</a></li>
+			<li><a class="notImplemented" href="#">Cesta per famiglia</a></li>
+		</ul>
+	<br />
+	
+	<a href="/ricette?fromProduct=${f:h(prodotto.key)}"><h3>Ricette correlate</h3></a><br />
+	
+	<a class="notImplemented" href="#"><h3>Diete correlate</h3></a>
+
+	
+	
     </jsp:attribute>
     <jsp:body>
     </jsp:body>

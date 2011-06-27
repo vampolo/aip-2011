@@ -56,12 +56,22 @@
 				</div>
     </jsp:attribute>
     <jsp:attribute name="sidebar">
-    <h2>Prodotti correlati</h2>
-					<p>
-						<c:forEach var="ingrediente" items="${ingredienti}">
-							<a href="/prodotto?key=${f:h(ingrediente.key)}&fromRecipe=${f:h(ricetta.key)}">${f:h(ingrediente.productName)}</a><br />
-						</c:forEach>
-					</p>
+    <c:if test="${not empty ingredienti}">	
+    	<h3>Prodotti correlati</h3>
+		<p>
+			<c:forEach var="ingrediente" items="${ingredienti}">
+				<a href="/prodotto?key=${f:h(ingrediente.key)}&fromRecipe=${f:h(ricetta.key)}">${f:h(ingrediente.productName)}</a><br />
+			</c:forEach>
+		</p>
+		<br />
+	</c:if>
+	
+	<h3>Diete correlate</h3>
+		<ul>
+			<li><a class="notImplemented" href="#">Dieta vegetariana</a></li>
+			<li><a class="notImplemented" href="#">Dieta in gravidanza</a></li>
+		</ul>
+	
     </jsp:attribute>
     <jsp:body>
     </jsp:body>
