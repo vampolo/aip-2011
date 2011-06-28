@@ -49,7 +49,7 @@
 					</ul>
 				</li>
 				<li>
-					<h2><a href="/prodotti?fromProducer=${f:h(produttore.key)}">Prodotti correlati</a></h2>
+					<a href="/prodotti?fromProducer=${f:h(produttore.key)}"><h3>Prodotti correlati</h3></a>
 				</li>
 			</ul>
     </jsp:attribute>
